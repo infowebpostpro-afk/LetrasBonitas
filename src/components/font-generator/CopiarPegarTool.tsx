@@ -109,53 +109,47 @@ export function CopiarPegarTool() {
 
   return (
     <div className="copiar-pegar-tool">
-      {/* ───── Text input ───── */}
-      <section className="tool-panel" aria-labelledby="cp-input-label">
-        <label id="cp-input-label" className="font-input__label" htmlFor="cp-input">
-          Escribe tu texto
-        </label>
-        <textarea
-          id="cp-input"
-          className="font-input__textarea"
+      {/* ───── Comprehensive Font Generator (Primary Tool) ───── */}
+      <section aria-labelledby="cp-explorer-heading">
+        <h2 id="cp-explorer-heading" className="section-heading section-heading--lg">
+          {cursiveStyles.length}+ estilos cursivos para copiar
+        </h2>
+        <p className="section-subheading">
+          Explora todos los estilos, filtra por categoría y copia el que más te guste.
+        </p>
+        <FontGenerator
           value={text}
-          onChange={(e) => handleTextChange(e.target.value)}
-          placeholder={DEFAULT_TEXT}
-          rows={3}
-          spellCheck
-          autoCapitalize="sentences"
-          autoComplete="off"
-          aria-describedby="cp-count"
+          onChange={handleTextChange}
+          styles={cursiveStyles}
+          categories={CURSIVE_CATEGORIES}
+          favoritesStorageKey={CURSIVE_TOOL_CONFIG.favoritesStorageKey}
+          recentCopiedStorageKey={CURSIVE_TOOL_CONFIG.recentCopiedStorageKey}
+          defaultCategory="popular"
+          defaultExample={DEFAULT_TEXT}
+          searchPlaceholder="Buscar estilo cursivo..."
+          filterStyles={(styles, category, favorites) =>
+            getCursiveStylesByCategory(
+              styles as CursiveStyle[],
+              category as CursiveCategoryId,
+              favorites,
+            )
+          }
+          searchStyles={(styles, query) =>
+            searchCursiveStyles(styles as CursiveStyle[], query)
+          }
         />
-        <div className="font-input__meta">
-          <p
-            id="cp-count"
-            className={`font-input__count${nearLimit ? " is-near-limit" : ""}`}
-          >
-            {count} / {MAX_CHARS}
-          </p>
-          <div className="font-input__actions">
-            <button
-              type="button"
-              className="btn btn--ghost"
-              onClick={() => setText("")}
-              disabled={!text}
-            >
-              Limpiar
-            </button>
-          </div>
-        </div>
       </section>
 
-      {/* ───── Top results — copy-first panel ───── */}
-      <section aria-labelledby="top-results-heading">
+      {/* ───── Quick copy top cursive styles ───── */}
+      <section aria-labelledby="top-results-heading" style={{ marginTop: "3rem" }}>
         <h2 id="top-results-heading" className="section-heading">
-          Copia tu texto en cursiva
+          Vista rápida de estilos destacados
         </h2>
         <p className="section-subheading">
           Toca cualquier resultado para copiarlo al instante.
         </p>
 
-        <div className="top-results" role="list" aria-label="Resultados cursivos para copiar">
+        <div className="top-results" role="list" aria-label="Resultados cursivos destacados para copiar">
           {topStyles.map((style) => {
             const preview = topPreviews.get(style.id) ?? sourceText;
             const isCopied = copiedId === `top-${style.id}`;
@@ -199,43 +193,14 @@ export function CopiarPegarTool() {
       </section>
 
       {/* ───── Quick copy alphabet ───── */}
-      <section aria-labelledby="cp-alphabet-heading">
+      <section aria-labelledby="cp-alphabet-heading" style={{ marginTop: "3rem" }}>
         <h2 id="cp-alphabet-heading" className="section-heading section-heading--lg">
-          Letras cursivas individuales para copiar
+          Letras cursivas individuales para copiar (A-Z)
         </h2>
         <p className="section-subheading">
-          Copia cualquier letra cursiva de la A a la Z con un toque.
+          Copia cualquier letra cursiva de la A a la Z con un solo toque.
         </p>
         <AlphabetGrid transform={defaultTransform} toast={showToast} />
-      </section>
-
-      {/* ───── Full style explorer ───── */}
-      <section aria-labelledby="cp-explorer-heading">
-        <h2 id="cp-explorer-heading" className="section-heading section-heading--lg">
-          {cursiveStyles.length}+ estilos cursivos para copiar
-        </h2>
-        <p className="section-subheading">
-          Explora todos los estilos, filtra por categoría y copia el que más te guste.
-        </p>
-        <FontGenerator
-          styles={cursiveStyles}
-          categories={CURSIVE_CATEGORIES}
-          favoritesStorageKey={CURSIVE_TOOL_CONFIG.favoritesStorageKey}
-          recentCopiedStorageKey={CURSIVE_TOOL_CONFIG.recentCopiedStorageKey}
-          defaultCategory="popular"
-          defaultExample={sourceText}
-          searchPlaceholder="Buscar estilo cursivo..."
-          filterStyles={(styles, category, favorites) =>
-            getCursiveStylesByCategory(
-              styles as CursiveStyle[],
-              category as CursiveCategoryId,
-              favorites,
-            )
-          }
-          searchStyles={(styles, query) =>
-            searchCursiveStyles(styles as CursiveStyle[], query)
-          }
-        />
       </section>
 
       {/* ───── Internal links ───── */}

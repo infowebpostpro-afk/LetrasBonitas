@@ -165,13 +165,14 @@ export function CursiveInstagramGenerator() {
       {/* ───── Main Cursive Generator Playground ───── */}
       <section aria-label="Generador de letras cursivas para Instagram">
         <FontGenerator
-          key={inputText}
+          value={inputText}
+          onChange={setInputText}
           styles={cursiveStylesList}
           categories={CURSIVE_CATEGORIES}
           favoritesStorageKey="letrasbonitas:instagram-cursivas:favorites"
           recentCopiedStorageKey="letrasbonitas:instagram-cursivas:recent-copied"
           defaultCategory="all"
-          defaultExample={inputText}
+          defaultExample={DEFAULT_TEXT}
           searchPlaceholder="Buscar estilo cursivo (ej: script, manuscrita, italica, elegante)..."
           filterStyles={(styles, category, favorites) =>
             getStylesByCategory(

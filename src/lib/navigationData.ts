@@ -87,6 +87,22 @@ export const SILO_NAVIGATION: SiloNavGroup[] = [
   },
 ];
 
+export const TRUST_NAVIGATION: NavItem[] = [
+  { title: "Sobre Nosotros", href: "/sobre-nosotros/" },
+  { title: "Cómo Funcionan Nuestras Herramientas", href: "/como-funcionan-nuestras-herramientas/" },
+  { title: "Contacto", href: "/contacto/" },
+  { title: "Accesibilidad", href: "/accesibilidad/" },
+];
+
+export const LEGAL_NAVIGATION: NavItem[] = [
+  { title: "Política de Privacidad", href: "/politica-de-privacidad/" },
+  { title: "Política de Cookies", href: "/politica-de-cookies/" },
+  { title: "Términos y Condiciones", href: "/terminos-y-condiciones/" },
+  { title: "Descargo de Responsabilidad", href: "/descargo-de-responsabilidad/" },
+  { title: "Información Publicitaria", href: "/publicidad/" },
+  { title: "Derechos de Autor", href: "/derechos-de-autor/" },
+];
+
 export function isActiveRoute(currentPathname: string, href: string): boolean {
   if (href === "/") {
     return currentPathname === "/";

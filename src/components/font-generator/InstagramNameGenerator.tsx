@@ -128,13 +128,14 @@ export function InstagramNameGenerator() {
       {/* ───── Main Engine Playground ───── */}
       <section aria-label="Generador de fuentes para nombres">
         <FontGenerator
-          key={inputText}
+          value={inputText}
+          onChange={setInputText}
           styles={fontStyles as GeneratorStyle[]}
           categories={FONT_CATEGORIES}
           favoritesStorageKey="letrasbonitas:instagram-nombres:favorites"
           recentCopiedStorageKey="letrasbonitas:instagram-nombres:recent-copied"
           defaultCategory="all"
-          defaultExample={inputText}
+          defaultExample={DEFAULT_NAME}
           searchPlaceholder="Buscar estilo para tu nombre (ej: cursiva, negrita, gotica, aesthetic)..."
           filterStyles={(styles, category, favorites) =>
             getStylesByCategory(

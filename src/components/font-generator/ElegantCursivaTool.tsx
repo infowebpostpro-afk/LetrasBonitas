@@ -192,60 +192,31 @@ export function ElegantCursivaTool() {
 
   return (
     <div className="copiar-pegar-tool">
-      {/* ── Interactive Generator Input Panel ── */}
-      <section className="tool-panel font-input-shell" aria-label="Generador de texto cursivo elegante">
-        <div className="font-input-shell__header">
-          <div className="font-input-shell__title">
-            <SparklesIcon className="font-input-shell__icon" size={20} />
-            <label htmlFor="text-input-main" className="font-input-shell__label">
-              Transformador de Cursivas Elegantes
-            </label>
-          </div>
-          <span className={`font-input-shell__count${count >= MAX_CHARS * 0.9 ? " is-limit" : ""}`}>
-            {count} / {MAX_CHARS}
-          </span>
+      {/* ── 100+ Styles Full Explorer Section (Primary Tool) ── */}
+      <section className="all-styles-section" aria-labelledby="all-styles-title">
+        <div className="section-header">
+          <span className="section-header__badge">CATÁLOGO COMPLETO</span>
+          <h2 id="all-styles-title" className="section-heading">
+            +100 Estilos Cursivos Elegantes
+          </h2>
+          <p className="section-subheading">
+            Explora la colección completa. Filtra por categorías o usa el buscador inteligente.
+          </p>
         </div>
 
-        <div className="font-input-shell__body">
-          <textarea
-            id="text-input-main"
-            className="font-input-shell__textarea"
-            value={text}
-            onChange={(e) => handleTextChange(e.target.value)}
-            placeholder="Escribe tu texto o nombre aquí (ej: María, Elegancia)..."
-            rows={3}
-            spellCheck
-            autoCapitalize="sentences"
-            autoComplete="off"
-            aria-label="Escribe tu texto para transformar en letras cursivas elegantes"
-          />
-        </div>
-
-        <div className="font-input-shell__actions">
-          <div className="font-input-shell__hints">
-            <span className="badge badge--soft">✨ Vista previa en tiempo real</span>
-          </div>
-          <div className="font-input-shell__btns">
-            <button
-              type="button"
-              className="btn btn--ghost"
-              onClick={handlePaste}
-              title="Pegar texto guardado en el portapapeles"
-            >
-              <PasteIcon size={16} /> Pegar
-            </button>
-            {text && (
-              <button
-                type="button"
-                className="btn btn--ghost"
-                onClick={() => setText("")}
-                title="Limpiar la casilla de entrada"
-              >
-                <ClearIcon size={16} /> Limpiar
-              </button>
-            )}
-          </div>
-        </div>
+        <FontGenerator
+          value={text}
+          onChange={handleTextChange}
+          styles={cursiveStyles as GeneratorStyle[]}
+          categories={ELEGANT_CATEGORIES}
+          favoritesStorageKey="letrasbonitas:elegant:favorites"
+          recentCopiedStorageKey="letrasbonitas:elegant:recent-copied"
+          defaultCategory="elegant"
+          defaultExample={DEFAULT_TEXT}
+          searchPlaceholder="Buscar por nombre o tipo (ej: caligráfica, fina, firma)..."
+          filterStyles={filterElegantStyles}
+          searchStyles={searchCursiveStyles as (styles: GeneratorStyle[], q: string) => GeneratorStyle[]}
+        />
       </section>
 
       {/* Toast Floating Notification */}
@@ -254,7 +225,7 @@ export function ElegantCursivaTool() {
       </div>
 
       {/* ── Highlighted Popular Elegant Styles ── */}
-      <section className="popular-elegant-section" aria-labelledby="popular-elegant-title">
+      <section className="popular-elegant-section" aria-labelledby="popular-elegant-title" style={{ marginTop: "3rem" }}>
         <div className="section-header">
           <span className="section-header__badge">DESTACADOS</span>
           <h2 id="popular-elegant-title" className="section-heading">
@@ -316,31 +287,12 @@ export function ElegantCursivaTool() {
       </section>
 
       {/* ── Abecedario Cursivo Elegante Section ── */}
-      <AlphabetGrid transform={alphabetTransform} toast={(msg) => setToast(msg)} />
-
-      {/* ── 100+ Styles Full Explorer Section ── */}
-      <section className="all-styles-section" aria-labelledby="all-styles-title">
-        <div className="section-header">
-          <span className="section-header__badge">CATÁLOGO COMPLETO</span>
-          <h2 id="all-styles-title" className="section-heading">
-            +100 Estilos Cursivos Elegantes
-          </h2>
-          <p className="section-subheading">
-            Explora la colección completa. Filtra por categorías o usa el buscador inteligente.
-          </p>
-        </div>
-
-        <FontGenerator
-          styles={cursiveStyles as GeneratorStyle[]}
-          categories={ELEGANT_CATEGORIES}
-          favoritesStorageKey="letrasbonitas:elegant:favorites"
-          recentCopiedStorageKey="letrasbonitas:elegant:recent-copied"
-          defaultCategory="elegant"
-          defaultExample={DEFAULT_TEXT}
-          searchPlaceholder="Buscar por nombre o tipo (ej: caligráfica, fina, firma)..."
-          filterStyles={filterElegantStyles}
-          searchStyles={searchCursiveStyles as (styles: GeneratorStyle[], q: string) => GeneratorStyle[]}
-        />
+      <section aria-label="Abecedario Cursivo Elegante" style={{ marginTop: "3rem" }}>
+        <h2 className="section-heading">Abecedario Cursivo Elegante (A-Z)</h2>
+        <p className="section-subheading" style={{ marginBottom: "1rem" }}>
+          Copia cualquier letra cursiva elegante individual de la A a la Z.
+        </p>
+        <AlphabetGrid transform={alphabetTransform} toast={(msg) => setToast(msg)} />
       </section>
 
       {/* ───── Internal links ───── */}

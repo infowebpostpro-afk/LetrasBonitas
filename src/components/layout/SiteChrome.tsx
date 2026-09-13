@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   SILO_NAVIGATION,
+  TRUST_NAVIGATION,
+  LEGAL_NAVIGATION,
   isActiveRoute,
   isSiloActive,
 } from "@/lib/navigationData";
@@ -288,7 +290,7 @@ export function Footer() {
           </p>
         </div>
 
-        {/* 4 Navigation Columns */}
+        {/* Navigation Columns */}
         <div className="site-footer__nav-grid">
           {/* Column 1: EXPLORAR */}
           <div className="site-footer__col">
@@ -315,26 +317,39 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Columns 2, 3, 4: SILOS */}
-          {SILO_NAVIGATION.map((silo) => (
-            <div key={`col-${silo.id}`} className="site-footer__col">
-              <span className="site-footer__col-heading">
-                {silo.title.toUpperCase()}
-              </span>
-              <ul className="site-footer__link-list">
-                {silo.children.map((child) => (
-                  <li key={`footer-${child.href}`}>
-                    <Link
-                      href={child.href}
-                      className={isActiveRoute(pathname, child.href) ? "is-active" : ""}
-                    >
-                      {child.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Column 2: INFORMACIÓN */}
+          <div className="site-footer__col">
+            <span className="site-footer__col-heading">INFORMACIÓN</span>
+            <ul className="site-footer__link-list">
+              {TRUST_NAVIGATION.map((item) => (
+                <li key={`trust-${item.href}`}>
+                  <Link
+                    href={item.href}
+                    className={isActiveRoute(pathname, item.href) ? "is-active" : ""}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: LEGAL */}
+          <div className="site-footer__col">
+            <span className="site-footer__col-heading">LEGAL</span>
+            <ul className="site-footer__link-list">
+              {LEGAL_NAVIGATION.map((item) => (
+                <li key={`legal-${item.href}`}>
+                  <Link
+                    href={item.href}
+                    className={isActiveRoute(pathname, item.href) ? "is-active" : ""}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <hr className="site-footer__divider" />

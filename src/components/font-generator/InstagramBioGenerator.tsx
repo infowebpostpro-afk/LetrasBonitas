@@ -118,13 +118,14 @@ export function InstagramBioGenerator() {
       {/* ───── Main Engine Playground ───── */}
       <section aria-label="Generador de fuentes para bio">
         <FontGenerator
-          key={inputText}
+          value={inputText}
+          onChange={setInputText}
           styles={fontStyles as GeneratorStyle[]}
           categories={FONT_CATEGORIES}
           favoritesStorageKey="letrasbonitas:instagram-bio:favorites"
           recentCopiedStorageKey="letrasbonitas:instagram-bio:recent-copied"
           defaultCategory="all"
-          defaultExample={inputText}
+          defaultExample={DEFAULT_BIO}
           searchPlaceholder="Buscar estilo para tu bio (ej: cursiva, elegante, negrita, gotica)..."
           filterStyles={(styles, category, favorites) =>
             getStylesByCategory(

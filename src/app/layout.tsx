@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [
+      { url: "/logo.webp", type: "image/webp" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Letras Bonitas",
     description:

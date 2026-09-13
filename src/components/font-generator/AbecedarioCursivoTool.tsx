@@ -109,118 +109,23 @@ export function AbecedarioCursivoTool() {
 
   return (
     <div className="abecedario-tool">
-      {/* ───── Custom text generator (mini) ───── */}
-      <section className="tool-panel text-generator-mini" aria-labelledby="gen-label">
-        <label id="gen-label" className="font-input__label" htmlFor="gen-input">
-          Escribe tu texto
-        </label>
-        <textarea
-          id="gen-input"
-          className="font-input__textarea"
-          value={text}
-          onChange={(e) => handleTextChange(e.target.value)}
-          placeholder={DEFAULT_TEXT}
-          rows={3}
-          spellCheck
-          autoCapitalize="sentences"
-          autoComplete="off"
-          aria-describedby="gen-count"
-        />
-        <div className="font-input__meta">
-          <p
-            id="gen-count"
-            className={`font-input__count${nearLimit ? " is-near-limit" : ""}`}
-          >
-            {count} / {MAX_CHARS}
-          </p>
-          <div className="font-input__actions">
-            <button
-              type="button"
-              className="btn btn--ghost"
-              onClick={() => setText("")}
-              disabled={!text}
-            >
-              Limpiar
-            </button>
-          </div>
-        </div>
-
-        <div className="text-generator-mini__style">
-          <label htmlFor="gen-style-select" className="text-generator-mini__style-label">
-            Estilo
-          </label>
-          <select
-            id="gen-style-select"
-            className="text-generator-mini__select"
-            value={generatorStyleId}
-            onChange={(e) => setGeneratorStyleId(e.target.value)}
-          >
-            {alphabetStyles.map((s) => (
-              <option key={s.id} value={s.id}>
-                {s.name}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="text-generator-mini__output">
-          <output className="text-generator-mini__result" aria-live="polite">
-            {generatedOutput}
-          </output>
-          <button
-            type="button"
-            className={`btn btn--primary${copiedGenerator ? " is-copied" : ""}`}
-            onClick={handleCopyOutput}
-          >
-            {copiedGenerator ? (
-              <>
-                <CheckIcon size={14} /> Copiado
-              </>
-            ) : (
-              "Copiar"
-            )}
-          </button>
-        </div>
-      </section>
-
-      {/* ───── Alphabet style selector ───── */}
-      <section className="tool-panel alphabet-style-selector" aria-labelledby="abc-style-label">
-        <label id="abc-style-label" className="font-input__label" htmlFor="abc-style-select">
-          Estilo del abecedario
-        </label>
-        <select
-          id="abc-style-select"
-          className="text-generator-mini__select"
-          value={selectedStyleId}
-          onChange={(e) => setSelectedStyleId(e.target.value)}
-        >
-          {alphabetStyles.map((s) => (
-            <option key={s.id} value={s.id}>
-              {s.name}
-            </option>
-          ))}
-        </select>
-      </section>
-
-      {/* ───── Alphabet grids ───── */}
-      <AlphabetGrid transform={selectedTransform} toast={showToast} />
-
-      {/* ───── Style Explorer ───── */}
+      {/* ───── Comprehensive Font Generator (Primary Tool) ───── */}
       <section aria-labelledby="style-explorer-heading">
         <h2 id="style-explorer-heading" className="section-heading section-heading--lg">
-          Explora {cursiveStyles.length}+ estilos cursivos
+          Explora {cursiveStyles.length}+ estilos cursivos y convierte tu texto
         </h2>
         <p className="section-subheading">
-          Escribe tu texto arriba y explora todos los estilos disponibles. Toca cualquier
-          tarjeta para copiar.
+          Escribe tu texto, filtra por categoría y copia el estilo que más te guste con un solo toque.
         </p>
         <FontGenerator
+          value={text}
+          onChange={handleTextChange}
           styles={cursiveStyles}
           categories={CURSIVE_CATEGORIES}
           favoritesStorageKey={CURSIVE_TOOL_CONFIG.favoritesStorageKey}
           recentCopiedStorageKey={CURSIVE_TOOL_CONFIG.recentCopiedStorageKey}
           defaultCategory="popular"
-          defaultExample={sourceText}
+          defaultExample={DEFAULT_TEXT}
           searchPlaceholder="Buscar estilo cursivo..."
           filterStyles={(styles, category, favorites) =>
             getCursiveStylesByCategory(
@@ -233,6 +138,35 @@ export function AbecedarioCursivoTool() {
             searchCursiveStyles(styles as CursiveStyle[], query)
           }
         />
+      </section>
+
+      {/* ───── Alphabet style selector & Grid ───── */}
+      <section aria-labelledby="abc-style-label" style={{ marginTop: "3rem" }}>
+        <h2 id="abc-style-label" className="section-heading section-heading--lg">
+          Abecedario Cursivo Completo (A-Z)
+        </h2>
+        <p className="section-subheading">
+          Selecciona un estilo tipográfico y copia cualquier letra individual del alfabeto cursivo.
+        </p>
+        <div className="tool-panel alphabet-style-selector" style={{ marginBottom: "1rem" }}>
+          <label htmlFor="abc-style-select" className="font-input__label">
+            Estilo del abecedario
+          </label>
+          <select
+            id="abc-style-select"
+            className="text-generator-mini__select"
+            value={selectedStyleId}
+            onChange={(e) => setSelectedStyleId(e.target.value)}
+          >
+            {alphabetStyles.map((s) => (
+              <option key={s.id} value={s.id}>
+                {s.name}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <AlphabetGrid transform={selectedTransform} toast={showToast} />
       </section>
 
       {/* ───── Internal links ───── */}

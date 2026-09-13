@@ -27,6 +27,8 @@ export type GeneratorStyle = {
 };
 
 type FontGeneratorProps = {
+  value?: string;
+  onChange?: (value: string) => void;
   styles: GeneratorStyle[];
   categories: CategoryOption[];
   favoritesStorageKey: string;
@@ -40,9 +42,12 @@ type FontGeneratorProps = {
     favoriteIds: Set<string>,
   ) => GeneratorStyle[];
   searchStyles: (styles: GeneratorStyle[], query: string) => GeneratorStyle[];
+  children?: React.ReactNode;
 };
 
 export function FontGenerator({
+  value,
+  onChange,
   styles,
   categories,
   favoritesStorageKey,
@@ -52,8 +57,21 @@ export function FontGenerator({
   searchPlaceholder = "Buscar estilo...",
   filterStyles,
   searchStyles: searchFn,
+  children,
 }: FontGeneratorProps) {
-  const [text, setText] = useState<string>(defaultExample);
+  const [internalText, setInternalText] = useState<string>(defaultExample);
+  const text = value !== undefined ? value : internalText;
+
+  const handleTextChange = useCallback(
+    (nextText: string) => {
+      if (onChange) {
+        onChange(nextText);
+      } else {
+        setInternalText(nextText);
+      }
+    },
+    [onChange],
+  );
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState(defaultCategory);
   const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -147,7 +165,13 @@ export function FontGenerator({
 
   return (
     <div className="font-generator">
-      <FontInput value={text} onChange={setText} onClear={() => setText("")} />
+      <FontInput
+        value={text}
+        onChange={handleTextChange}
+        onClear={() => handleTextChange("")}
+      />
+
+      {children}
 
       <div className="toolbar tool-panel">
         <FontSearch
