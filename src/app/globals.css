@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap");
+/* Next.js next/font handles Google Fonts zero-latency preloading */
 
 /* ════════════════════════════════════════════
    DESIGN TOKENS
@@ -96,8 +96,8 @@
   --header-h: 64px;
 
   /* ── Typography ── */
-  --font-ui: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-brand: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-ui: var(--font-inter), "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-brand: var(--font-sora), "Sora", ui-sans-serif, system-ui, sans-serif;
   --font-preview: "Segoe UI Symbol", "Apple Color Emoji", "Noto Color Emoji", "Inter", sans-serif;
 
   /* ── Motion ── */
@@ -708,6 +708,8 @@ img {
 .font-generator {
   display: grid;
   gap: var(--space-5);
+  min-height: 520px;
+  contain-intrinsic-size: 520px;
 }
 
 
@@ -758,7 +760,7 @@ img {
 }
 
 .font-input__textarea::placeholder {
-  color: var(--color-faint);
+  color: var(--color-muted);
 }
 
 .font-input__textarea:focus {
@@ -782,7 +784,7 @@ img {
   align-items: center;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-faint);
+  color: var(--color-ink-soft);
   background: var(--color-surface-2);
   padding: 0.2rem 0.6rem;
   border-radius: var(--radius-full);
@@ -1131,7 +1133,7 @@ img {
   gap: 0.3rem;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-faint);
+  color: var(--color-ink-soft);
   transition: color var(--duration-fast) var(--ease);
 }
 
@@ -2172,7 +2174,7 @@ footer a {
 
 .sample-pill span {
   font-size: 0.7rem;
-  color: var(--color-muted);
+  color: var(--color-ink-soft);
   font-weight: 600;
 }
 
@@ -3383,7 +3385,7 @@ footer a {
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.85rem;
-  color: var(--color-ink-faint, #94a3b8);
+  color: var(--color-ink-soft, #475569);
 }
 
 .site-footer__copyright {
