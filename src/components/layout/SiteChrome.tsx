@@ -98,6 +98,7 @@ export function Header() {
             alt="LetrasBonitas Logo"
             width={34}
             height={34}
+            priority
             className="site-header__logo"
           />
           <span>Letras<span className="site-header__brand-accent">Bonitas</span></span>
