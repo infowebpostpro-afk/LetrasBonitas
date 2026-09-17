@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
@@ -29,33 +29,33 @@ export default function DescargoDeResponsabilidadPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/descargo-de-responsabilidad/#webpage",
-        url: "https://letrasbonitas.com/descargo-de-responsabilidad/",
+        "@id": "https://letrasbonits.com/descargo-de-responsabilidad/#webpage",
+        url: "https://letrasbonits.com/descargo-de-responsabilidad/",
         name: "Descargo de Responsabilidad | LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/descargo-de-responsabilidad/#breadcrumb",
+        "@id": "https://letrasbonits.com/descargo-de-responsabilidad/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Descargo de Responsabilidad",
-            item: "https://letrasbonitas.com/descargo-de-responsabilidad/",
+            item: "https://letrasbonits.com/descargo-de-responsabilidad/",
           },
         ],
       },
@@ -137,3 +137,4 @@ export default function DescargoDeResponsabilidadPage() {
     </main>
   );
 }
+

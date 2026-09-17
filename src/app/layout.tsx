@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Footer, Header } from "@/components/layout/SiteChrome";
+import { SITE_URL } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "Letras Bonitas — Generador de estilos Unicode",
   description:
     "Convierte tu texto en letras bonitas al instante. Más de 300 estilos Unicode para copiar y pegar.",
-  metadataBase: new URL("https://letrasbonitas.com"),
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "/",
   },

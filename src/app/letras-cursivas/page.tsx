@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { CursiveFontGenerator } from "@/components/font-generator/CursiveFontGenerator";
@@ -36,8 +36,8 @@ export default function LetrasCursivasPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         description:
           "Generador de letras bonitas y recursos tipográficos en español.",
@@ -45,8 +45,8 @@ export default function LetrasCursivasPage() {
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/letras-cursivas/#webpage",
-        url: "https://letrasbonitas.com/letras-cursivas/",
+        "@id": "https://letrasbonits.com/letras-cursivas/#webpage",
+        url: "https://letrasbonits.com/letras-cursivas/",
         name: "Letras Cursivas para Copiar y Pegar | Generador Gratis",
         description:
           "Genera letras cursivas bonitas y elegantes para copiar y pegar. Escribe tu texto, explora diferentes estilos y copia el resultado para usarlo en tus perfiles y mensajes.",
@@ -54,25 +54,25 @@ export default function LetrasCursivasPage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/letras-cursivas/#breadcrumb",
+        "@id": "https://letrasbonits.com/letras-cursivas/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Letras Cursivas",
-            item: "https://letrasbonitas.com/letras-cursivas/",
+            item: "https://letrasbonits.com/letras-cursivas/",
           },
         ],
       },
       {
         "@type": "FAQPage",
-        "@id": "https://letrasbonitas.com/letras-cursivas/#faq",
+        "@id": "https://letrasbonits.com/letras-cursivas/#faq",
         mainEntity: [
           {
             "@type": "Question",
@@ -1138,3 +1138,4 @@ export default function LetrasCursivasPage() {
     </main>
   );
 }
+

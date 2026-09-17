@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { CopiarPegarTool } from "@/components/font-generator/CopiarPegarTool";
@@ -36,8 +36,8 @@ export default function LetrasCursivasCopiarPegarPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         description:
           "Generador de letras bonitas y recursos tipográficos en español.",
@@ -45,8 +45,8 @@ export default function LetrasCursivasCopiarPegarPage() {
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/letras-cursivas/letras-cursivas-para-copiar-y-pegar/#webpage",
-        url: "https://letrasbonitas.com/letras-cursivas/letras-cursivas-para-copiar-y-pegar/",
+        "@id": "https://letrasbonits.com/letras-cursivas/letras-cursivas-para-copiar-y-pegar/#webpage",
+        url: "https://letrasbonits.com/letras-cursivas/letras-cursivas-para-copiar-y-pegar/",
         name: "Letras Cursivas para Copiar y Pegar | Generador Gratis",
         description:
           "Letras cursivas para copiar y pegar. Convierte palabras y frases, compara estilos y copia tu texto cursivo para usarlo en redes sociales, bios y nombres.",
@@ -54,31 +54,31 @@ export default function LetrasCursivasCopiarPegarPage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/letras-cursivas/letras-cursivas-para-copiar-y-pegar/#breadcrumb",
+        "@id": "https://letrasbonits.com/letras-cursivas/letras-cursivas-para-copiar-y-pegar/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Letras Cursivas",
-            item: "https://letrasbonitas.com/letras-cursivas/",
+            item: "https://letrasbonits.com/letras-cursivas/",
           },
           {
             "@type": "ListItem",
             position: 3,
             name: "Letras Cursivas para Copiar y Pegar",
-            item: "https://letrasbonitas.com/letras-cursivas/letras-cursivas-para-copiar-y-pegar/",
+            item: "https://letrasbonits.com/letras-cursivas/letras-cursivas-para-copiar-y-pegar/",
           },
         ],
       },
       {
         "@type": "FAQPage",
-        "@id": "https://letrasbonitas.com/letras-cursivas/letras-cursivas-para-copiar-y-pegar/#faq",
+        "@id": "https://letrasbonits.com/letras-cursivas/letras-cursivas-para-copiar-y-pegar/#faq",
         mainEntity: [
           {
             "@type": "Question",
@@ -1070,3 +1070,4 @@ export default function LetrasCursivasCopiarPegarPage() {
     </main>
   );
 }
+

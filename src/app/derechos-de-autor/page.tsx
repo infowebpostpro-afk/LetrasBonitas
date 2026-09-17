@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
@@ -29,33 +29,33 @@ export default function DerechosDeAutorPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/derechos-de-autor/#webpage",
-        url: "https://letrasbonitas.com/derechos-de-autor/",
+        "@id": "https://letrasbonits.com/derechos-de-autor/#webpage",
+        url: "https://letrasbonits.com/derechos-de-autor/",
         name: "Derechos de Autor | LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/derechos-de-autor/#breadcrumb",
+        "@id": "https://letrasbonits.com/derechos-de-autor/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Derechos de Autor",
-            item: "https://letrasbonitas.com/derechos-de-autor/",
+            item: "https://letrasbonits.com/derechos-de-autor/",
           },
         ],
       },
@@ -132,3 +132,4 @@ export default function DerechosDeAutorPage() {
     </main>
   );
 }
+

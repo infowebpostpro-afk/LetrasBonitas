@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
@@ -29,33 +29,33 @@ export default function PoliticaDePrivacidadPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/politica-de-privacidad/#webpage",
-        url: "https://letrasbonitas.com/politica-de-privacidad/",
+        "@id": "https://letrasbonits.com/politica-de-privacidad/#webpage",
+        url: "https://letrasbonits.com/politica-de-privacidad/",
         name: "Política de Privacidad | LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/politica-de-privacidad/#breadcrumb",
+        "@id": "https://letrasbonits.com/politica-de-privacidad/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Política de Privacidad",
-            item: "https://letrasbonitas.com/politica-de-privacidad/",
+            item: "https://letrasbonits.com/politica-de-privacidad/",
           },
         ],
       },
@@ -94,7 +94,7 @@ export default function PoliticaDePrivacidadPage() {
         <section className="article-section">
           <h2>1. Introducción</h2>
           <p>
-            Bienvenido a <strong>LetrasBonitas</strong>. La presente Política de Privacidad explica cómo tratamos la información personal y los datos de navegación cuando utilizas nuestro sitio web accesible en <code>https://letrasbonitas.com/</code> y cualquiera de sus subpáginas y herramientas interactivas.
+            Bienvenido a <strong>LetrasBonitas</strong>. La presente Política de Privacidad explica cómo tratamos la información personal y los datos de navegación cuando utilizas nuestro sitio web accesible en <code>https://letrasbonits.com/</code> y cualquiera de sus subpáginas y herramientas interactivas.
           </p>
 
           <h2>2. Responsable del sitio web</h2>
@@ -211,3 +211,4 @@ export default function PoliticaDePrivacidadPage() {
     </main>
   );
 }
+

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
@@ -29,33 +29,33 @@ export default function AccesibilidadPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/accesibilidad/#webpage",
-        url: "https://letrasbonitas.com/accesibilidad/",
+        "@id": "https://letrasbonits.com/accesibilidad/#webpage",
+        url: "https://letrasbonits.com/accesibilidad/",
         name: "Accesibilidad | LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/accesibilidad/#breadcrumb",
+        "@id": "https://letrasbonits.com/accesibilidad/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Accesibilidad",
-            item: "https://letrasbonitas.com/accesibilidad/",
+            item: "https://letrasbonits.com/accesibilidad/",
           },
         ],
       },
@@ -123,3 +123,4 @@ export default function AccesibilidadPage() {
     </main>
   );
 }
+

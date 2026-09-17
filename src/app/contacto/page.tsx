@@ -29,33 +29,33 @@ export default function ContactoPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "ContactPage",
-        "@id": "https://letrasbonitas.com/contacto/#webpage",
-        url: "https://letrasbonitas.com/contacto/",
+        "@id": "https://letrasbonits.com/contacto/#webpage",
+        url: "https://letrasbonits.com/contacto/",
         name: "Contacto | LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/contacto/#breadcrumb",
+        "@id": "https://letrasbonits.com/contacto/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Contacto",
-            item: "https://letrasbonitas.com/contacto/",
+            item: "https://letrasbonits.com/contacto/",
           },
         ],
       },
@@ -107,7 +107,7 @@ export default function ContactoPage() {
           <h2>Vías directas de contacto</h2>
           <div className="code-block" style={{ margin: "1.5rem 0", padding: "1.5rem" }}>
             <p style={{ margin: 0, fontWeight: 600, fontSize: "1.1rem" }}>
-              📧 Correo de atención oficial: <code style={{ color: "var(--color-primary)" }}>contacto@letrasbonitas.com</code>
+              📧 Correo de atención oficial: <code style={{ color: "var(--color-primary)" }}>contacto@letrasbonits.com</code>
             </p>
           </div>
 
@@ -128,3 +128,4 @@ export default function ContactoPage() {
     </main>
   );
 }
+

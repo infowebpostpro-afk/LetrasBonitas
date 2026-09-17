@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
@@ -29,33 +29,33 @@ export default function PoliticaDeCookiesPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/politica-de-cookies/#webpage",
-        url: "https://letrasbonitas.com/politica-de-cookies/",
+        "@id": "https://letrasbonits.com/politica-de-cookies/#webpage",
+        url: "https://letrasbonits.com/politica-de-cookies/",
         name: "Política de Cookies | LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/politica-de-cookies/#breadcrumb",
+        "@id": "https://letrasbonits.com/politica-de-cookies/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Política de Cookies",
-            item: "https://letrasbonitas.com/politica-de-cookies/",
+            item: "https://letrasbonits.com/politica-de-cookies/",
           },
         ],
       },
@@ -167,3 +167,4 @@ export default function PoliticaDeCookiesPage() {
     </main>
   );
 }
+

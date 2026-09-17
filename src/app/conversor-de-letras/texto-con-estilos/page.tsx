@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { TextoConEstilosTool } from "@/components/font-generator/TextoConEstilosTool";
@@ -36,8 +36,8 @@ export default function TextoConEstilosPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         description:
           "Generador de letras bonitas y recursos tipográficos en español.",
@@ -45,8 +45,8 @@ export default function TextoConEstilosPage() {
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/texto-con-estilos/#webpage",
-        url: "https://letrasbonitas.com/conversor-de-letras/texto-con-estilos/",
+        "@id": "https://letrasbonits.com/conversor-de-letras/texto-con-estilos/#webpage",
+        url: "https://letrasbonits.com/conversor-de-letras/texto-con-estilos/",
         name: "Texto con Estilos Online | Generador de Texto Estilizado",
         description:
           "Crea texto con estilos online. Escribe una palabra o frase, compara letras cursivas, elegantes, góticas y otros estilos, y copia el resultado.",
@@ -54,33 +54,33 @@ export default function TextoConEstilosPage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/texto-con-estilos/#breadcrumb",
+        "@id": "https://letrasbonits.com/conversor-de-letras/texto-con-estilos/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Conversor de Letras",
-            item: "https://letrasbonitas.com/conversor-de-letras/",
+            item: "https://letrasbonits.com/conversor-de-letras/",
           },
           {
             "@type": "ListItem",
             position: 3,
             name: "Texto con Estilos",
-            item: "https://letrasbonitas.com/conversor-de-letras/texto-con-estilos/",
+            item: "https://letrasbonits.com/conversor-de-letras/texto-con-estilos/",
           },
         ],
       },
       {
         "@type": "WebApplication",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/texto-con-estilos/#app",
+        "@id": "https://letrasbonits.com/conversor-de-letras/texto-con-estilos/#app",
         name: "Texto con Estilos",
-        url: "https://letrasbonitas.com/conversor-de-letras/texto-con-estilos/",
+        url: "https://letrasbonits.com/conversor-de-letras/texto-con-estilos/",
         applicationCategory: "UtilityApplication",
         operatingSystem: "All",
         browserRequirements: "Requires HTML5 and JavaScript",
@@ -92,7 +92,7 @@ export default function TextoConEstilosPage() {
       },
       {
         "@type": "FAQPage",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/texto-con-estilos/#faq",
+        "@id": "https://letrasbonits.com/conversor-de-letras/texto-con-estilos/#faq",
         mainEntity: [
           {
             "@type": "Question",
@@ -912,3 +912,4 @@ export default function TextoConEstilosPage() {
     </main>
   );
 }
+

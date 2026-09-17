@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ElegantCursivaTool } from "@/components/font-generator/ElegantCursivaTool";
@@ -36,8 +36,8 @@ export default function LetrasCursivasElegantesPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         description:
           "Generador de letras bonitas y recursos tipográficos en español.",
@@ -45,8 +45,8 @@ export default function LetrasCursivasElegantesPage() {
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/letras-cursivas/letras-cursivas-elegantes/#webpage",
-        url: "https://letrasbonitas.com/letras-cursivas/letras-cursivas-elegantes/",
+        "@id": "https://letrasbonits.com/letras-cursivas/letras-cursivas-elegantes/#webpage",
+        url: "https://letrasbonits.com/letras-cursivas/letras-cursivas-elegantes/",
         name: "Letras Cursivas Elegantes para Copiar y Pegar",
         description:
           "Crea letras cursivas elegantes para copiar y pegar. Descubre estilos finos, caligráficos y decorativos para nombres, bios, frases y redes sociales.",
@@ -54,31 +54,31 @@ export default function LetrasCursivasElegantesPage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/letras-cursivas/letras-cursivas-elegantes/#breadcrumb",
+        "@id": "https://letrasbonits.com/letras-cursivas/letras-cursivas-elegantes/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Letras Cursivas",
-            item: "https://letrasbonitas.com/letras-cursivas/",
+            item: "https://letrasbonits.com/letras-cursivas/",
           },
           {
             "@type": "ListItem",
             position: 3,
             name: "Letras Cursivas Elegantes",
-            item: "https://letrasbonitas.com/letras-cursivas/letras-cursivas-elegantes/",
+            item: "https://letrasbonits.com/letras-cursivas/letras-cursivas-elegantes/",
           },
         ],
       },
       {
         "@type": "FAQPage",
-        "@id": "https://letrasbonitas.com/letras-cursivas/letras-cursivas-elegantes/#faq",
+        "@id": "https://letrasbonits.com/letras-cursivas/letras-cursivas-elegantes/#faq",
         mainEntity: [
           {
             "@type": "Question",
@@ -880,3 +880,4 @@ export default function LetrasCursivasElegantesPage() {
     </main>
   );
 }
+

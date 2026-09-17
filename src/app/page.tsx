@@ -4,25 +4,25 @@ import { HomeFontGenerator } from "@/components/font-generator/HomeFontGenerator
 import { fontStyles } from "@/lib/unicode";
 
 export const metadata: Metadata = {
-  title: "Letras Bonitas — Generador de letras para copiar y pegar",
+  title: "Letras Bonitas para Copiar y Pegar | LetrasBonitas",
   description:
-    "Generador de letras bonitas para copiar y pegar. Transforma tu texto al instante con más de 300 estilos de cursiva, gótica, negrita y aesthetic para Instagram, WhatsApp y juegos.",
+    "Genera letras bonitas para copiar y pegar. Escribe tu texto, prueba diferentes estilos y copia el resultado para usarlo donde quieras.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Letras Bonitas — Generador de letras para copiar y pegar",
+    title: "Letras Bonitas para Copiar y Pegar | LetrasBonitas",
     description:
-      "Escribe tu texto y conviértelo al instante en letras bonitas, cursivas, elegantes, góticas, negritas y aesthetic con más de 300 estilos Unicode.",
+      "Genera letras bonitas para copiar y pegar. Escribe tu texto, prueba diferentes estilos y copia el resultado para usarlo donde quieras.",
     locale: "es",
     type: "website",
     url: "/",
   },
   twitter: {
     card: "summary",
-    title: "Letras Bonitas — Generador de letras para copiar y pegar",
+    title: "Letras Bonitas para Copiar y Pegar | LetrasBonitas",
     description:
-      "Escribe tu texto y conviértelo al instante en letras bonitas, cursivas, elegantes, góticas, negritas y aesthetic con más de 300 estilos Unicode.",
+      "Genera letras bonitas para copiar y pegar. Escribe tu texto, prueba diferentes estilos y copia el resultado para usarlo donde quieras.",
   },
   robots: {
     index: true,
@@ -38,8 +38,8 @@ export default function HomePage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         description:
           "Generador de letras bonitas para copiar y pegar. Más de 300 estilos de cursiva, gótica, negrita y aesthetic.",
@@ -47,16 +47,16 @@ export default function HomePage() {
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/#webpage",
-        url: "https://letrasbonitas.com/",
-        name: "Letras Bonitas — Generador de letras para copiar y pegar",
+        "@id": "https://letrasbonits.com/#webpage",
+        url: "https://letrasbonits.com/",
+        name: "Letras Bonitas para Copiar y Pegar | LetrasBonitas",
         description:
-          "Generador de letras bonitas para copiar y pegar. Transforma tu texto al instante con más de 300 estilos Unicode.",
+          "Genera letras bonitas para copiar y pegar. Escribe tu texto, prueba diferentes estilos y copia el resultado para usarlo donde quieras.",
         inLanguage: "es",
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/#breadcrumb",
+        "@id": "https://letrasbonits.com/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
@@ -85,10 +85,10 @@ export default function HomePage() {
         <div className="hero-saas__content">
           <span className="hero-saas__badge">✨ GENERADOR DE TEXTO UNICODE</span>
           <h1 className="hero-saas__title">
-            Transforma tu texto en{"\n"}letras <span className="gradient-text-cyan">increíbles</span>
+            Letras Bonitas para <span className="gradient-text-cyan">Copiar y Pegar</span>
           </h1>
           <p className="hero-saas__lead">
-            Escribe tu texto, descubre más de {styleCount} estilos de <strong>letras bonitas, cursivas, elegantes, góticas y aesthetic</strong>, y copia el resultado en un clic.
+            Transforma tu texto en letras cursivas, bonitas y diferentes. Escribe, elige tu estilo favorito y copia el resultado con un clic.
           </p>
           <div className="hero-saas__trust-row">
             <span className="hero-saas__trust-item"><span className="hero-saas__trust-check">✓</span> Sin registro</span>
@@ -106,7 +106,7 @@ export default function HomePage() {
         
         {/* Section 1: Intro */}
         <section className="prose-card">
-          <h2>Generador de Letras Bonitas para Copiar y Pegar</h2>
+          <h2>Generador de Letras Bonitas</h2>
           <p>
             Escribe una palabra, un nombre, una frase o cualquier otro texto en el generador. Los diferentes estilos aparecerán de forma instantánea para que puedas compararlos y elegir el que más te guste.
           </p>
@@ -134,9 +134,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Section 2: +300 Styles */}
+        {/* Section 2: Styles */}
         <section className="prose-card">
-          <h2>Más de {styleCount} estilos de letras para explorar</h2>
+          <h2>Explora Diferentes Estilos de Letras</h2>
           <p>
             LetrasBonitas está diseñado como una herramienta de exploración, no solamente como un conversor de una única fuente. Puedes probar una gran colección de estilos y encontrar una apariencia que encaje con tu nombre, frase, perfil o proyecto.
           </p>
@@ -162,7 +162,7 @@ export default function HomePage() {
             La cantidad de estilos no debería significar simplemente repetir el mismo diseño con pequeños cambios. Cada estilo debe aportar una apariencia diferente y tener un uso razonable. Por eso, además de la cantidad, es importante que puedas <strong>buscar, comparar y copiar</strong> rápidamente.
           </p>
 
-          <h3>Encuentra un estilo sin perder tiempo</h3>
+          <h3>Encuentra tu estilo favorito</h3>
           <p>
             Cuando existen cientos de opciones, desplazarse por toda la página puede resultar incómodo. Por eso el generador debe ayudarte a encontrar rápidamente el tipo de letra que buscas. Puedes explorar por categorías, buscar estilos y comparar diferentes resultados con tu propio texto.
           </p>
@@ -689,3 +689,4 @@ export default function HomePage() {
     </main>
   );
 }
+

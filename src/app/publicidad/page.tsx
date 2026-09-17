@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
@@ -29,33 +29,33 @@ export default function PublicidadPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/publicidad/#webpage",
-        url: "https://letrasbonitas.com/publicidad/",
+        "@id": "https://letrasbonits.com/publicidad/#webpage",
+        url: "https://letrasbonits.com/publicidad/",
         name: "Información Publicitaria | LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/publicidad/#breadcrumb",
+        "@id": "https://letrasbonits.com/publicidad/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Información Publicitaria",
-            item: "https://letrasbonitas.com/publicidad/",
+            item: "https://letrasbonits.com/publicidad/",
           },
         ],
       },
@@ -132,3 +132,4 @@ export default function PublicidadPage() {
     </main>
   );
 }
+

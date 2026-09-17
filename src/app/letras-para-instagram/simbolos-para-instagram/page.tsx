@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { InstagramSymbolsExplorer } from "@/components/font-generator/InstagramSymbolsExplorer";
@@ -36,8 +36,8 @@ export default function SimbolosParaInstagramPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         description:
           "Generador de letras bonitas y recursos tipográficos en español.",
@@ -45,8 +45,8 @@ export default function SimbolosParaInstagramPage() {
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/letras-para-instagram/simbolos-para-instagram/#webpage",
-        url: "https://letrasbonitas.com/letras-para-instagram/simbolos-para-instagram/",
+        "@id": "https://letrasbonits.com/letras-para-instagram/simbolos-para-instagram/#webpage",
+        url: "https://letrasbonits.com/letras-para-instagram/simbolos-para-instagram/",
         name: "Símbolos para Instagram: Copiar y Pegar",
         description:
           "Encuentra símbolos para Instagram, corazones, estrellas, flores, flechas y separadores. Copia tus favoritos y pégalos en tu bio, captions y perfil.",
@@ -54,33 +54,33 @@ export default function SimbolosParaInstagramPage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/letras-para-instagram/simbolos-para-instagram/#breadcrumb",
+        "@id": "https://letrasbonits.com/letras-para-instagram/simbolos-para-instagram/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Letras para Instagram",
-            item: "https://letrasbonitas.com/letras-para-instagram/",
+            item: "https://letrasbonits.com/letras-para-instagram/",
           },
           {
             "@type": "ListItem",
             position: 3,
             name: "Símbolos para Instagram",
-            item: "https://letrasbonitas.com/letras-para-instagram/simbolos-para-instagram/",
+            item: "https://letrasbonits.com/letras-para-instagram/simbolos-para-instagram/",
           },
         ],
       },
       {
         "@type": "WebApplication",
-        "@id": "https://letrasbonitas.com/letras-para-instagram/simbolos-para-instagram/#app",
+        "@id": "https://letrasbonits.com/letras-para-instagram/simbolos-para-instagram/#app",
         name: "Símbolos para Instagram",
-        url: "https://letrasbonitas.com/letras-para-instagram/simbolos-para-instagram/",
+        url: "https://letrasbonits.com/letras-para-instagram/simbolos-para-instagram/",
         applicationCategory: "UtilityApplication",
         operatingSystem: "All",
         browserRequirements: "Requires HTML5 and JavaScript",
@@ -1022,3 +1022,4 @@ export default function SimbolosParaInstagramPage() {
     </main>
   );
 }
+

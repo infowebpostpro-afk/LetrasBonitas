@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
@@ -29,33 +29,33 @@ export default function SobreNosotrosPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "AboutPage",
-        "@id": "https://letrasbonitas.com/sobre-nosotros/#webpage",
-        url: "https://letrasbonitas.com/sobre-nosotros/",
+        "@id": "https://letrasbonits.com/sobre-nosotros/#webpage",
+        url: "https://letrasbonits.com/sobre-nosotros/",
         name: "Sobre Nosotros | LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/sobre-nosotros/#breadcrumb",
+        "@id": "https://letrasbonits.com/sobre-nosotros/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Sobre Nosotros",
-            item: "https://letrasbonitas.com/sobre-nosotros/",
+            item: "https://letrasbonits.com/sobre-nosotros/",
           },
         ],
       },
@@ -146,3 +146,4 @@ export default function SobreNosotrosPage() {
     </main>
   );
 }
+

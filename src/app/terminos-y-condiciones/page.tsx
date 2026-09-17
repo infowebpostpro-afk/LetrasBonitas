@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
@@ -29,33 +29,33 @@ export default function TerminosYCondicionesPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/terminos-y-condiciones/#webpage",
-        url: "https://letrasbonitas.com/terminos-y-condiciones/",
+        "@id": "https://letrasbonits.com/terminos-y-condiciones/#webpage",
+        url: "https://letrasbonits.com/terminos-y-condiciones/",
         name: "Términos y Condiciones | LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/terminos-y-condiciones/#breadcrumb",
+        "@id": "https://letrasbonits.com/terminos-y-condiciones/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Términos y Condiciones",
-            item: "https://letrasbonitas.com/terminos-y-condiciones/",
+            item: "https://letrasbonits.com/terminos-y-condiciones/",
           },
         ],
       },
@@ -94,7 +94,7 @@ export default function TerminosYCondicionesPage() {
         <section className="article-section">
           <h2>1. Introducción</h2>
           <p>
-            Al acceder y utilizar el sitio web <strong>LetrasBonitas</strong> (<code>https://letrasbonitas.com/</code>), aceptas cumplir y quedar vinculado por los siguientes Términos y Condiciones. Si no estás de acuerdo con alguno de ellos, te solicitamos abstenerte de utilizar el sitio.
+            Al acceder y utilizar el sitio web <strong>LetrasBonitas</strong> (<code>https://letrasbonits.com/</code>), aceptas cumplir y quedar vinculado por los siguientes Términos y Condiciones. Si no estás de acuerdo con alguno de ellos, te solicitamos abstenerte de utilizar el sitio.
           </p>
 
           <h2>2. Aceptación de los términos</h2>
@@ -192,3 +192,4 @@ export default function TerminosYCondicionesPage() {
     </main>
   );
 }
+

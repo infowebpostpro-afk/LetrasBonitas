@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ConversorDeLetrasTool } from "@/components/font-generator/ConversorDeLetrasTool";
@@ -36,8 +36,8 @@ export default function ConversorDeLetrasPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         description:
           "Generador de letras bonitas y recursos tipográficos en español.",
@@ -45,8 +45,8 @@ export default function ConversorDeLetrasPage() {
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/#webpage",
-        url: "https://letrasbonitas.com/conversor-de-letras/",
+        "@id": "https://letrasbonits.com/conversor-de-letras/#webpage",
+        url: "https://letrasbonits.com/conversor-de-letras/",
         name: "Conversor de Letras Online | Letras Bonitas para Copiar y Pegar",
         description:
           "Usa nuestro conversor de letras para crear texto bonito, cursivo, elegante y aesthetic. Escribe, elige un estilo y copia tus letras para redes sociales.",
@@ -54,27 +54,27 @@ export default function ConversorDeLetrasPage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/#breadcrumb",
+        "@id": "https://letrasbonits.com/conversor-de-letras/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Conversor de Letras",
-            item: "https://letrasbonitas.com/conversor-de-letras/",
+            item: "https://letrasbonits.com/conversor-de-letras/",
           },
         ],
       },
       {
         "@type": "WebApplication",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/#app",
+        "@id": "https://letrasbonits.com/conversor-de-letras/#app",
         name: "Conversor de Letras",
-        url: "https://letrasbonitas.com/conversor-de-letras/",
+        url: "https://letrasbonits.com/conversor-de-letras/",
         applicationCategory: "UtilityApplication",
         operatingSystem: "All",
         browserRequirements: "Requires HTML5 and JavaScript",
@@ -86,7 +86,7 @@ export default function ConversorDeLetrasPage() {
       },
       {
         "@type": "FAQPage",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/#faq",
+        "@id": "https://letrasbonits.com/conversor-de-letras/#faq",
         mainEntity: [
           {
             "@type": "Question",
@@ -784,3 +784,4 @@ export default function ConversorDeLetrasPage() {
     </main>
   );
 }
+

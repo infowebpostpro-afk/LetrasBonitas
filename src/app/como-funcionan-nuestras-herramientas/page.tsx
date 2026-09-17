@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
@@ -29,33 +29,33 @@ export default function ComoFuncionanNuestrasHerramientasPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/como-funcionan-nuestras-herramientas/#webpage",
-        url: "https://letrasbonitas.com/como-funcionan-nuestras-herramientas/",
+        "@id": "https://letrasbonits.com/como-funcionan-nuestras-herramientas/#webpage",
+        url: "https://letrasbonits.com/como-funcionan-nuestras-herramientas/",
         name: "Cómo Funcionan Nuestras Herramientas | LetrasBonitas",
         inLanguage: "es",
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/como-funcionan-nuestras-herramientas/#breadcrumb",
+        "@id": "https://letrasbonits.com/como-funcionan-nuestras-herramientas/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Cómo Funcionan Nuestras Herramientas",
-            item: "https://letrasbonitas.com/como-funcionan-nuestras-herramientas/",
+            item: "https://letrasbonits.com/como-funcionan-nuestras-herramientas/",
           },
         ],
       },
@@ -147,3 +147,4 @@ export default function ComoFuncionanNuestrasHerramientasPage() {
     </main>
   );
 }
+

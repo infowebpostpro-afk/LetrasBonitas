@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { CursiveInstagramGenerator } from "@/components/font-generator/CursiveInstagramGenerator";
@@ -36,8 +36,8 @@ export default function LetrasCursivasParaInstagramPage() {
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/letras-para-instagram/letras-cursivas-para-instagram/#webpage",
-        url: "https://letrasbonitas.com/letras-para-instagram/letras-cursivas-para-instagram/",
+        "@id": "https://letrasbonits.com/letras-para-instagram/letras-cursivas-para-instagram/#webpage",
+        url: "https://letrasbonits.com/letras-para-instagram/letras-cursivas-para-instagram/",
         name: "Letras Cursivas para Instagram: Copiar y Pegar",
         description:
           "Genera letras cursivas para Instagram, escribe tu texto, compara estilos y copia el resultado para tu bio, nombre, publicaciones o comentarios.",
@@ -45,25 +45,25 @@ export default function LetrasCursivasParaInstagramPage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/letras-para-instagram/letras-cursivas-para-instagram/#breadcrumb",
+        "@id": "https://letrasbonits.com/letras-para-instagram/letras-cursivas-para-instagram/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Letras para Instagram",
-            item: "https://letrasbonitas.com/letras-para-instagram/",
+            item: "https://letrasbonits.com/letras-para-instagram/",
           },
           {
             "@type": "ListItem",
             position: 3,
             name: "Letras Cursivas para Instagram",
-            item: "https://letrasbonitas.com/letras-para-instagram/letras-cursivas-para-instagram/",
+            item: "https://letrasbonits.com/letras-para-instagram/letras-cursivas-para-instagram/",
           },
         ],
       },
@@ -741,3 +741,4 @@ export default function LetrasCursivasParaInstagramPage() {
     </main>
   );
 }
+

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { AbecedarioCursivoTool } from "@/components/font-generator/AbecedarioCursivoTool";
@@ -36,8 +36,8 @@ export default function AbecedarioCursivoPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         description:
           "Generador de letras bonitas y recursos tipográficos en español.",
@@ -45,8 +45,8 @@ export default function AbecedarioCursivoPage() {
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/letras-cursivas/abecedario-cursivo/#webpage",
-        url: "https://letrasbonitas.com/letras-cursivas/abecedario-cursivo/",
+        "@id": "https://letrasbonits.com/letras-cursivas/abecedario-cursivo/#webpage",
+        url: "https://letrasbonits.com/letras-cursivas/abecedario-cursivo/",
         name: "Abecedario Cursivo: Letras de la A a la Z para Copiar",
         description:
           "Abecedario cursivo completo de la A a la Z. Copia letras cursivas mayúsculas y minúsculas, consulta ejemplos y descubre cómo usarlas en tus textos.",
@@ -54,31 +54,31 @@ export default function AbecedarioCursivoPage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/letras-cursivas/abecedario-cursivo/#breadcrumb",
+        "@id": "https://letrasbonits.com/letras-cursivas/abecedario-cursivo/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Letras Cursivas",
-            item: "https://letrasbonitas.com/letras-cursivas/",
+            item: "https://letrasbonits.com/letras-cursivas/",
           },
           {
             "@type": "ListItem",
             position: 3,
             name: "Abecedario Cursivo",
-            item: "https://letrasbonitas.com/letras-cursivas/abecedario-cursivo/",
+            item: "https://letrasbonits.com/letras-cursivas/abecedario-cursivo/",
           },
         ],
       },
       {
         "@type": "FAQPage",
-        "@id": "https://letrasbonitas.com/letras-cursivas/abecedario-cursivo/#faq",
+        "@id": "https://letrasbonits.com/letras-cursivas/abecedario-cursivo/#faq",
         mainEntity: [
           {
             "@type": "Question",
@@ -1038,3 +1038,4 @@ export default function AbecedarioCursivoPage() {
     </main>
   );
 }
+

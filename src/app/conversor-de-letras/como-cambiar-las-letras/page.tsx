@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ComoCambiarLasLetrasTool } from "@/components/font-generator/ComoCambiarLasLetrasTool";
@@ -36,8 +36,8 @@ export default function ComoCambiarLasLetrasPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         description:
           "Generador de letras bonitas y recursos tipográficos en español.",
@@ -45,8 +45,8 @@ export default function ComoCambiarLasLetrasPage() {
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/como-cambiar-las-letras/#webpage",
-        url: "https://letrasbonitas.com/conversor-de-letras/como-cambiar-las-letras/",
+        "@id": "https://letrasbonits.com/conversor-de-letras/como-cambiar-las-letras/#webpage",
+        url: "https://letrasbonits.com/conversor-de-letras/como-cambiar-las-letras/",
         name: "Cómo Cambiar las Letras Online | Letras Bonitas",
         description:
           "Aprende cómo cambiar las letras de tu texto con estilos cursivos, elegantes, góticos y aesthetic. Escribe, elige un estilo, copia y pega.",
@@ -54,31 +54,31 @@ export default function ComoCambiarLasLetrasPage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/como-cambiar-las-letras/#breadcrumb",
+        "@id": "https://letrasbonits.com/conversor-de-letras/como-cambiar-las-letras/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Conversor de Letras",
-            item: "https://letrasbonitas.com/conversor-de-letras/",
+            item: "https://letrasbonits.com/conversor-de-letras/",
           },
           {
             "@type": "ListItem",
             position: 3,
             name: "Cómo Cambiar las Letras",
-            item: "https://letrasbonitas.com/conversor-de-letras/como-cambiar-las-letras/",
+            item: "https://letrasbonits.com/conversor-de-letras/como-cambiar-las-letras/",
           },
         ],
       },
       {
         "@type": "HowTo",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/como-cambiar-las-letras/#howto",
+        "@id": "https://letrasbonits.com/conversor-de-letras/como-cambiar-las-letras/#howto",
         name: "Cómo cambiar las letras de tu texto online",
         description:
           "Paso a paso para cambiar el estilo de tus letras sin instalar fuentes.",
@@ -111,9 +111,9 @@ export default function ComoCambiarLasLetrasPage() {
       },
       {
         "@type": "WebApplication",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/como-cambiar-las-letras/#app",
+        "@id": "https://letrasbonits.com/conversor-de-letras/como-cambiar-las-letras/#app",
         name: "Cambiador de Letras",
-        url: "https://letrasbonitas.com/conversor-de-letras/como-cambiar-las-letras/",
+        url: "https://letrasbonits.com/conversor-de-letras/como-cambiar-las-letras/",
         applicationCategory: "UtilityApplication",
         operatingSystem: "All",
         browserRequirements: "Requires HTML5 and JavaScript",
@@ -125,7 +125,7 @@ export default function ComoCambiarLasLetrasPage() {
       },
       {
         "@type": "FAQPage",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/como-cambiar-las-letras/#faq",
+        "@id": "https://letrasbonits.com/conversor-de-letras/como-cambiar-las-letras/#faq",
         mainEntity: [
           {
             "@type": "Question",
@@ -857,3 +857,4 @@ export default function ComoCambiarLasLetrasPage() {
     </main>
   );
 }
+

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ConversorCopiarPegarTool } from "@/components/font-generator/ConversorCopiarPegarTool";
@@ -36,8 +36,8 @@ export default function LetrasParaCopiarPegarPage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://letrasbonitas.com/#website",
-        url: "https://letrasbonitas.com/",
+        "@id": "https://letrasbonits.com/#website",
+        url: "https://letrasbonits.com/",
         name: "LetrasBonitas",
         description:
           "Generador de letras bonitas y recursos tipográficos en español.",
@@ -45,8 +45,8 @@ export default function LetrasParaCopiarPegarPage() {
       },
       {
         "@type": "WebPage",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/letras-para-copiar-y-pegar/#webpage",
-        url: "https://letrasbonitas.com/conversor-de-letras/letras-para-copiar-y-pegar/",
+        "@id": "https://letrasbonits.com/conversor-de-letras/letras-para-copiar-y-pegar/#webpage",
+        url: "https://letrasbonits.com/conversor-de-letras/letras-para-copiar-y-pegar/",
         name: "Letras para Copiar y Pegar | Conversor de Fuentes y Texto",
         description:
           "Letras para copiar y pegar gratis. Encuentra fuentes bonitas, cursivas, góticas, negritas y aesthetic listas para copiar con un clic en Instagram, WhatsApp y juegos.",
@@ -54,33 +54,33 @@ export default function LetrasParaCopiarPegarPage() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/letras-para-copiar-y-pegar/#breadcrumb",
+        "@id": "https://letrasbonits.com/conversor-de-letras/letras-para-copiar-y-pegar/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Inicio",
-            item: "https://letrasbonitas.com/",
+            item: "https://letrasbonits.com/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Conversor de Letras",
-            item: "https://letrasbonitas.com/conversor-de-letras/",
+            item: "https://letrasbonits.com/conversor-de-letras/",
           },
           {
             "@type": "ListItem",
             position: 3,
             name: "Letras para Copiar y Pegar",
-            item: "https://letrasbonitas.com/conversor-de-letras/letras-para-copiar-y-pegar/",
+            item: "https://letrasbonits.com/conversor-de-letras/letras-para-copiar-y-pegar/",
           },
         ],
       },
       {
         "@type": "WebApplication",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/letras-para-copiar-y-pegar/#app",
+        "@id": "https://letrasbonits.com/conversor-de-letras/letras-para-copiar-y-pegar/#app",
         name: "Letras para Copiar y Pegar",
-        url: "https://letrasbonitas.com/conversor-de-letras/letras-para-copiar-y-pegar/",
+        url: "https://letrasbonits.com/conversor-de-letras/letras-para-copiar-y-pegar/",
         applicationCategory: "UtilityApplication",
         operatingSystem: "All",
         browserRequirements: "Requires HTML5 and JavaScript",
@@ -92,7 +92,7 @@ export default function LetrasParaCopiarPegarPage() {
       },
       {
         "@type": "FAQPage",
-        "@id": "https://letrasbonitas.com/conversor-de-letras/letras-para-copiar-y-pegar/#faq",
+        "@id": "https://letrasbonits.com/conversor-de-letras/letras-para-copiar-y-pegar/#faq",
         mainEntity: [
           {
             "@type": "Question",
@@ -673,3 +673,4 @@ export default function LetrasParaCopiarPegarPage() {
     </main>
   );
 }
+
