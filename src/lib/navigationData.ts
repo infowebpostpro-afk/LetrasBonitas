@@ -85,6 +85,33 @@ export const SILO_NAVIGATION: SiloNavGroup[] = [
       },
     ],
   },
+  {
+    id: "nombres-para-free-fire",
+    title: "Nombres para Free Fire",
+    href: "/nombres-para-free-fire/",
+    children: [
+      {
+        title: "Nombres para Free Fire",
+        href: "/nombres-para-free-fire/",
+      },
+      {
+        title: "Nombres Insanos",
+        href: "/nombres-para-free-fire/nombres-insanos/",
+      },
+      {
+        title: "Apodos para Free Fire",
+        href: "/nombres-para-free-fire/apodos/",
+      },
+      {
+        title: "Nombres para Clanes",
+        href: "/nombres-para-free-fire/clanes/",
+      },
+      {
+        title: "Símbolos para Free Fire",
+        href: "/nombres-para-free-fire/simbolos/",
+      },
+    ],
+  },
 ];
 
 export const TRUST_NAVIGATION: NavItem[] = [

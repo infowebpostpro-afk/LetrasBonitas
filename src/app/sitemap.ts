@@ -17,6 +17,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/letras-para-instagram/letras-para-nombres/",
     "/letras-para-instagram/simbolos-para-instagram/",
     "/letras-para-instagram/letras-cursivas-para-instagram/",
+    "/nombres-para-free-fire/",
+    "/nombres-para-free-fire/nombres-insanos/",
+    "/nombres-para-free-fire/apodos/",
+    "/nombres-para-free-fire/clanes/",
+    "/nombres-para-free-fire/simbolos/",
     "/sobre-nosotros/",
     "/como-funcionan-nuestras-herramientas/",
     "/contacto/",
@@ -39,11 +44,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     } else if (
       route === "/conversor-de-letras/" ||
       route === "/letras-cursivas/" ||
-      route === "/letras-para-instagram/"
+      route === "/letras-para-instagram/" ||
+      route === "/nombres-para-free-fire/"
     ) {
       priority = 0.9;
       changeFrequency = "weekly";
-    } else if (route.startsWith("/conversor-de-letras/") || route.startsWith("/letras-cursivas/") || route.startsWith("/letras-para-instagram/")) {
+    } else if (
+      route.startsWith("/conversor-de-letras/") ||
+      route.startsWith("/letras-cursivas/") ||
+      route.startsWith("/letras-para-instagram/") ||
+      route.startsWith("/nombres-para-free-fire/")
+    ) {
       priority = 0.8;
       changeFrequency = "monthly";
     } else if (route === "/sobre-nosotros/" || route === "/como-funcionan-nuestras-herramientas/" || route === "/contacto/") {
