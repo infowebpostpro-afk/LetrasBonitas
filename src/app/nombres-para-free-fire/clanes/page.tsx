@@ -451,7 +451,7 @@ export default function ClanesFreeFirePage() {
             </ol>
 
             <p>
-              Por ejemplo, si la palabra inicial es "Lobo", puedes explorar: <code>Lobo</code> → <code>Lobo Nova</code> → <code>亗Lobo亗</code> → <code>Lobo Core</code> → <code>★Lobo★</code>.
+              Por ejemplo, si la palabra inicial es &quot;Lobo&quot;, puedes explorar: <code>Lobo</code> → <code>Lobo Nova</code> → <code>亗Lobo亗</code> → <code>Lobo Core</code> → <code>★Lobo★</code>.
             </p>
 
             <h2 className="section-heading">Qué hacer si un símbolo aparece como un cuadro</h2>
@@ -492,7 +492,7 @@ export default function ClanesFreeFirePage() {
 
             <h2 className="section-heading">Cómo crear o gestionar un gremio en Free Fire</h2>
             <p>
-              Garena utiliza el término "gremio" para el sistema que reúne a jugadores que deciden jugar juntos. Desde el menú de gremios puedes buscar uno existente o iniciar el proceso para crear uno. La documentación oficial también explica que el creador selecciona el nombre, el eslogan y el método de aprobación de miembros.
+              Garena utiliza el término &quot;gremio&quot; para el sistema que reúne a jugadores que deciden jugar juntos. Desde el menú de gremios puedes buscar uno existente o iniciar el proceso para crear uno. La documentación oficial también explica que el creador selecciona el nombre, el eslogan y el método de aprobación de miembros.
             </p>
             <p>
               Los detalles del juego pueden cambiar con las actualizaciones, así que conviene comprobar la información directamente en el menú actual de Free Fire antes de confirmar cualquier cambio.

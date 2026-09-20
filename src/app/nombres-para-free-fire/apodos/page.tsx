@@ -415,7 +415,7 @@ export default function ApodosFreeFirePage() {
 
             <h2 className="section-heading">Original no significa imposible de repetir</h2>
             <p>
-              Es común buscar un apodo "único" que nadie más tenga. Sin embargo, una página pública no puede garantizar que una combinación no haya sido utilizada por otra persona.
+              Es común buscar un apodo &quot;único&quot; que nadie más tenga. Sin embargo, una página pública no puede garantizar que una combinación no haya sido utilizada por otra persona.
             </p>
 
             <p>

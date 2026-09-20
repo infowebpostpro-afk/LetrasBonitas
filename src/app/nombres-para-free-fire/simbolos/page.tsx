@@ -407,7 +407,7 @@ export default function SimbolosFreeFirePage() {
               Añadir un símbolo puede cambiar el texto que estás intentando utilizar, pero no significa que el nombre resultante esté disponible. Una biblioteca de símbolos no puede saber con certeza si un nombre está libre dentro de tu cuenta en el momento en que intentas registrarlo.
             </p>
             <p>
-              Por eso no debemos confundir "este nombre es diferente" con "este nombre está disponible". La disponibilidad real debe comprobarse dentro de Free Fire.
+              Por eso no debemos confundir &quot;este nombre es diferente&quot; con &quot;este nombre está disponible&quot;. La disponibilidad real debe comprobarse dentro de Free Fire.
             </p>
 
             <h2 className="section-heading">Preguntas frecuentes</h2>
