@@ -112,6 +112,12 @@ export function Header() {
           >
             Inicio
           </Link>
+          <Link
+            href="/simbolos/"
+            className={`site-header__nav-link ${isActiveRoute(pathname, "/simbolos/") ? "is-active" : ""}`}
+          >
+            Símbolos
+          </Link>
 
           {SILO_NAVIGATION.map((silo) => {
             const isGroupActive = isSiloActive(pathname, silo.href);
@@ -206,6 +212,13 @@ export function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               🚀 Inicio
+            </Link>
+            <Link
+              href="/simbolos/"
+              className={`site-header__mobile-link ${isActiveRoute(pathname, "/simbolos/") ? "is-active" : ""}`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              ✦ Símbolos
             </Link>
 
             <hr className="site-header__mobile-divider" />
@@ -303,6 +316,14 @@ export function Footer() {
                   className={isActiveRoute(pathname, "/") ? "is-active" : ""}
                 >
                   Inicio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/simbolos/"
+                  className={isActiveRoute(pathname, "/simbolos/") ? "is-active" : ""}
+                >
+                  Símbolos
                 </Link>
               </li>
               {SILO_NAVIGATION.map((silo) => (

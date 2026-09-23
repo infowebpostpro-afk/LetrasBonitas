@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/nombres-para-juegos/nicks/",
     "/nombres-para-juegos/nombres-para-clanes/",
     "/nombres-para-juegos/nombres-chidos/",
+    "/simbolos/",
     "/sobre-nosotros/",
     "/como-funcionan-nuestras-herramientas/",
     "/contacto/",
@@ -57,7 +58,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       route === "/nombres-para-juegos/apodos/" ||
       route === "/nombres-para-juegos/nicks/" ||
       route === "/nombres-para-juegos/nombres-para-clanes/" ||
-      route === "/nombres-para-juegos/nombres-chidos/"
+      route === "/nombres-para-juegos/nombres-chidos/" ||
+      route === "/simbolos/"
     ) {
       priority = 0.9;
       changeFrequency = "weekly";
