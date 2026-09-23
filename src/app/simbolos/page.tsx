@@ -109,7 +109,7 @@ export default function SimbolosPage() {
             Símbolos para Copiar y Pegar
           </h1>
           <p className="text-slate-300 text-base sm:text-lg max-w-3xl leading-relaxed">
-            Encuentra corazones, estrellas, flechas, flores, símbolos aesthetic y más. Toca uno para copiarlo inmediatamente o usa <strong>+ Añadir</strong> para preparar tu combinación personalizada con tu propio texto.
+            Encuentra emojis populares, caritas kaomoji, corazones, estrellas, flechas, flores, símbolos aesthetic y más. Toca cualquier símbolo o emoji para copiarlo al instante, o usa <strong>+ Añadir</strong> para preparar tu combinación personalizada con tu propio texto.
           </p>
         </header>
 
