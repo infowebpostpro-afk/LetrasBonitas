@@ -22,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/nombres-para-free-fire/apodos/",
     "/nombres-para-free-fire/clanes/",
     "/nombres-para-free-fire/simbolos/",
+    "/attitude-free-fire-nicknames/",
+    "/nombres-para-juegos/",
+    "/nombres-para-juegos/apodos/",
+    "/nombres-para-juegos/nicks/",
+    "/nombres-para-juegos/nombres-para-clanes/",
+    "/nombres-para-juegos/nombres-chidos/",
     "/sobre-nosotros/",
     "/como-funcionan-nuestras-herramientas/",
     "/contacto/",
@@ -45,7 +51,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       route === "/conversor-de-letras/" ||
       route === "/letras-cursivas/" ||
       route === "/letras-para-instagram/" ||
-      route === "/nombres-para-free-fire/"
+      route === "/nombres-para-free-fire/" ||
+      route === "/attitude-free-fire-nicknames/" ||
+      route === "/nombres-para-juegos/" ||
+      route === "/nombres-para-juegos/apodos/" ||
+      route === "/nombres-para-juegos/nicks/" ||
+      route === "/nombres-para-juegos/nombres-para-clanes/" ||
+      route === "/nombres-para-juegos/nombres-chidos/"
     ) {
       priority = 0.9;
       changeFrequency = "weekly";
@@ -53,7 +65,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       route.startsWith("/conversor-de-letras/") ||
       route.startsWith("/letras-cursivas/") ||
       route.startsWith("/letras-para-instagram/") ||
-      route.startsWith("/nombres-para-free-fire/")
+      route.startsWith("/nombres-para-free-fire/") ||
+      route.startsWith("/nombres-para-juegos/")
     ) {
       priority = 0.8;
       changeFrequency = "monthly";
