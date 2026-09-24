@@ -3,7 +3,7 @@ import { SITE_URL } from "@/lib/siteConfig";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
-    "",
+    "/",
     "/conversor-de-letras/",
     "/conversor-de-letras/letras-para-copiar-y-pegar/",
     "/conversor-de-letras/como-cambiar-las-letras/",
