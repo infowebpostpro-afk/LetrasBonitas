@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ClanItem } from '@/lib/gamingNames/clanesJuegosData';
+import { copyText } from '@/lib/clipboard';
 
 interface ClanShortlistModalProps {
   isOpen: boolean;
@@ -25,9 +26,11 @@ export const ClanShortlistModal: React.FC<ClanShortlistModalProps> = ({
 
   const copySingle = async (name: string, tag: string, id: string) => {
     try {
-      await navigator.clipboard.writeText(`${name} [${tag}]`);
-      setCopiedId(id);
-      setTimeout(() => setCopiedId(null), 1800);
+      const ok = await copyText(`${name} [${tag}]`);
+      if (ok) {
+        setCopiedId(id);
+        setTimeout(() => setCopiedId(null), 1800);
+      }
     } catch {
       // Fallback
     }
@@ -39,9 +42,11 @@ export const ClanShortlistModal: React.FC<ClanShortlistModalProps> = ({
         .map((entry, idx) => `${idx + 1}. ${entry.item.name} [${entry.selectedTag}]`)
         .join('\n');
       const textToCopy = `🎮 Opciones Finalistas para el Clan:\n${listText}\n\n¿Cuál votamos?`;
-      await navigator.clipboard.writeText(textToCopy);
-      setAllCopied(true);
-      setTimeout(() => setAllCopied(false), 2000);
+      const ok = await copyText(textToCopy);
+      if (ok) {
+        setAllCopied(true);
+        setTimeout(() => setAllCopied(false), 2000);
+      }
     } catch {
       // Fallback
     }

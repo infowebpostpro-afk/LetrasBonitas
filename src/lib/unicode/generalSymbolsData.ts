@@ -17,7 +17,12 @@ export type MasterSymbolCategory =
   | 'musica'
   | 'marcas'
   | 'zodiaco'
-  | 'matematicos';
+  | 'matematicos'
+  | 'caras'
+  | 'comida'
+  | 'deportes'
+  | 'transporte'
+  | 'banderas';
 
 export interface GeneralSymbol {
   id: string;
@@ -49,11 +54,16 @@ export const MASTER_CATEGORIES: { id: MasterSymbolCategory; label: string; icon:
   { id: 'separadores', label: 'Separadores', icon: '━' },
   { id: 'gaming', label: 'Gaming & Nicks', icon: '🎮' },
   { id: 'manos', label: 'Manos & Gestos', icon: '✌️' },
+  { id: 'caras', label: 'Caras & Emociones', icon: '😊' },
   { id: 'animales', label: 'Animales', icon: '🐾' },
+  { id: 'comida', label: 'Comida & Bebida', icon: '🍕' },
+  { id: 'deportes', label: 'Deportes & Actividades', icon: '⚽' },
+  { id: 'transporte', label: 'Viajes & Transporte', icon: '✈️' },
   { id: 'musica', label: 'Música', icon: '🎵' },
   { id: 'marcas', label: 'Marcas & Checks', icon: '✔' },
   { id: 'zodiaco', label: 'Zodiaco', icon: '♈' },
   { id: 'matematicos', label: 'Matemáticos', icon: '±' },
+  { id: 'banderas', label: 'Banderas', icon: '🏁' },
 ];
 
 export const GENERAL_SYMBOLS: GeneralSymbol[] = [
@@ -425,6 +435,96 @@ export const GENERAL_SYMBOLS: GeneralSymbol[] = [
   { id: 'mt-10', char: 'π', name: 'Número Pi', category: 'matematicos', tags: ['matematicas', 'pi', 'constante'] },
   { id: 'mt-11', char: '∑', name: 'Sumatoria', category: 'matematicos', tags: ['matematicas', 'suma', 'sigma'] },
   { id: 'mt-12', char: '∫', name: 'Integral', category: 'matematicos', tags: ['matematicas', 'calculo', 'integral'] },
+
+  // ══════════════════════════════════════════════════════════════
+  // ── CARAS & EMOCIONES ──
+  // ══════════════════════════════════════════════════════════════
+  { id: 'ca-1', char: '😊', name: 'Sonrisa Feliz Cálida', category: 'caras', tags: ['carita', 'feliz', 'sonrisa', 'contento'] },
+  { id: 'ca-2', char: '😂', name: 'Risa con Lágrimas', category: 'caras', tags: ['risa', 'carcajada', 'lagrimas', 'humor'] },
+  { id: 'ca-3', char: '🤣', name: 'Rodando de Risa', category: 'caras', tags: ['risa', 'suelo', 'humor', 'comedia'] },
+  { id: 'ca-4', char: '😍', name: 'Ojos de Corazón', category: 'caras', tags: ['enamorado', 'corazones', 'amor', 'encantado'] },
+  { id: 'ca-5', char: '🤩', name: 'Ojos de Estrella', category: 'caras', tags: ['estrella', 'impresionado', 'wow', 'asombro'] },
+  { id: 'ca-6', char: '😎', name: 'Cara con Gafas Cool', category: 'caras', tags: ['cool', 'gafas', 'lentes', 'pro', 'estilo'] },
+  { id: 'ca-7', char: '🤗', name: 'Abrazo Virtual', category: 'caras', tags: ['abrazo', 'carino', 'hug', 'tierno'] },
+  { id: 'ca-8', char: '😇', name: 'Angelito Inocente', category: 'caras', tags: ['angel', 'inocente', 'halo', 'bueno'] },
+  { id: 'ca-9', char: '😈', name: 'Diablito Travieso', category: 'caras', tags: ['diablo', 'travieso', 'cuernos', 'dark'] },
+  { id: 'ca-10', char: '🤪', name: 'Loco Zany', category: 'caras', tags: ['loco', 'zany', 'gracioso', 'divertido'] },
+  { id: 'ca-11', char: '😜', name: 'Guiño con Lengua', category: 'caras', tags: ['guino', 'lengua', 'broma', 'coqueto'] },
+  { id: 'ca-12', char: '🥳', name: 'Festejo con Gorrito', category: 'caras', tags: ['fiesta', 'celebrar', 'cumpleanos', 'gorrito'] },
+  { id: 'ca-13', char: '😭', name: 'Llanto Fuerte', category: 'caras', tags: ['llanto', 'triste', 'lagrimas', 'dramatico'] },
+  { id: 'ca-14', char: '🥱', name: 'Bostezo Sueño', category: 'caras', tags: ['bostezo', 'sueno', 'aburrido', 'cansado'] },
+  { id: 'ca-15', char: '😤', name: 'Cara Humo Enojado', category: 'caras', tags: ['enojo', 'humo', 'frustracion', 'rabia'] },
+  { id: 'ca-16', char: '🫠', name: 'Derretido de Calor', category: 'caras', tags: ['derretido', 'calor', 'flojo', 'relax'] },
+  { id: 'ca-17', char: '🫡', name: 'Saludo Militar', category: 'caras', tags: ['saludo', 'militar', 'respeto', 'sir'] },
+  { id: 'ca-18', char: '🫣', name: 'Tapándose un Ojo', category: 'caras', tags: ['timido', 'curiosidad', 'ojo', 'peek'] },
+  { id: 'ca-19', char: '😏', name: 'Sonrisa Pícara', category: 'caras', tags: ['picaro', 'coqueto', 'malicioso', 'travesura'] },
+  { id: 'ca-20', char: '🙄', name: 'Ojos Rodando', category: 'caras', tags: ['ojos', 'rodando', 'ironico', 'drama'] },
+
+  // ══════════════════════════════════════════════════════════════
+  // ── COMIDA & BEBIDA ──
+  // ══════════════════════════════════════════════════════════════
+  { id: 'co-1', char: '🍕', name: 'Pizza Deliciosa', category: 'comida', tags: ['pizza', 'comida', 'italiano', 'rico'] },
+  { id: 'co-2', char: '🍔', name: 'Hamburguesa Jugosa', category: 'comida', tags: ['hamburguesa', 'burger', 'comida', 'rapida'] },
+  { id: 'co-3', char: '🍟', name: 'Papas Fritas Crujientes', category: 'comida', tags: ['papas', 'fritas', 'snack', 'comida'] },
+  { id: 'co-4', char: '🌮', name: 'Taco Mexicano', category: 'comida', tags: ['taco', 'mexico', 'comida', 'salsa'] },
+  { id: 'co-5', char: '🍣', name: 'Sushi Japonés', category: 'comida', tags: ['sushi', 'japon', 'pescado', 'comida'] },
+  { id: 'co-6', char: '🍰', name: 'Pastel de Fresa', category: 'comida', tags: ['pastel', 'tarta', 'dulce', 'postre'] },
+  { id: 'co-7', char: '🧁', name: 'Cupcake Decorado', category: 'comida', tags: ['cupcake', 'dulce', 'decoracion', 'cute'] },
+  { id: 'co-8', char: '🍩', name: 'Dona Glaseada', category: 'comida', tags: ['dona', 'donut', 'dulce', 'chocolate'] },
+  { id: 'co-9', char: '🍦', name: 'Helado de Cucurucho', category: 'comida', tags: ['helado', 'verano', 'dulce', 'frio'] },
+  { id: 'co-10', char: '🍪', name: 'Galleta con Chispas', category: 'comida', tags: ['galleta', 'cookie', 'chocolate', 'dulce'] },
+  { id: 'co-11', char: '🍫', name: 'Barra de Chocolate', category: 'comida', tags: ['chocolate', 'dulce', 'cacao', 'snack'] },
+  { id: 'co-12', char: '🥤', name: 'Vaso con Popote', category: 'comida', tags: ['refresco', 'bebida', 'vaso', 'popote'] },
+  { id: 'co-13', char: '🍷', name: 'Copa de Vino Tinto', category: 'comida', tags: ['vino', 'copa', 'brindis', 'elegante'] },
+  { id: 'co-14', char: '🥂', name: 'Brindis Champaña', category: 'comida', tags: ['brindis', 'champana', 'fiesta', 'celebrar'] },
+  { id: 'co-15', char: '🍿', name: 'Palomitas de Cine', category: 'comida', tags: ['palomitas', 'cine', 'pelicula', 'snack'] },
+
+  // ══════════════════════════════════════════════════════════════
+  // ── DEPORTES & ACTIVIDADES ──
+  // ══════════════════════════════════════════════════════════════
+  { id: 'dp-1', char: '⚽', name: 'Balón de Fútbol', category: 'deportes', tags: ['futbol', 'balon', 'gol', 'deporte'] },
+  { id: 'dp-2', char: '🏀', name: 'Balón de Básquetbol', category: 'deportes', tags: ['basquetbol', 'nba', 'canasta', 'deporte'] },
+  { id: 'dp-3', char: '🏈', name: 'Balón de Fútbol Americano', category: 'deportes', tags: ['americano', 'nfl', 'touchdown', 'deporte'] },
+  { id: 'dp-4', char: '⚾', name: 'Pelota de Béisbol', category: 'deportes', tags: ['beisbol', 'pelota', 'bat', 'deporte'] },
+  { id: 'dp-5', char: '🎾', name: 'Pelota de Tenis', category: 'deportes', tags: ['tenis', 'raqueta', 'deporte', 'pelota'] },
+  { id: 'dp-6', char: '🏐', name: 'Balón de Voleibol', category: 'deportes', tags: ['voleibol', 'playa', 'red', 'deporte'] },
+  { id: 'dp-7', char: '🎱', name: 'Bola 8 Billar', category: 'deportes', tags: ['billar', 'pool', 'ocho', 'deporte'] },
+  { id: 'dp-8', char: '🏋️', name: 'Levantamiento de Pesas', category: 'deportes', tags: ['pesas', 'gym', 'fitness', 'fuerza'] },
+  { id: 'dp-9', char: '🧗', name: 'Escalada en Roca', category: 'deportes', tags: ['escalada', 'montaña', 'aventura', 'deporte'] },
+  { id: 'dp-10', char: '🏄', name: 'Surf en la Ola', category: 'deportes', tags: ['surf', 'playa', 'ola', 'mar'] },
+  { id: 'dp-11', char: '⛷️', name: 'Esquí en Nieve', category: 'deportes', tags: ['esqui', 'nieve', 'invierno', 'montaña'] },
+  { id: 'dp-12', char: '🏊', name: 'Nadando en el Agua', category: 'deportes', tags: ['nadar', 'piscina', 'agua', 'deporte'] },
+  { id: 'dp-13', char: '🚴', name: 'Ciclismo Veloz', category: 'deportes', tags: ['bicicleta', 'ciclismo', 'deporte', 'velocidad'] },
+  { id: 'dp-14', char: '🥊', name: 'Guante de Boxeo', category: 'deportes', tags: ['boxeo', 'pelea', 'lucha', 'deporte'] },
+  { id: 'dp-15', char: '🏹', name: 'Arco y Flecha', category: 'deportes', tags: ['arco', 'flecha', 'tiro', 'punteria'] },
+
+  // ══════════════════════════════════════════════════════════════
+  // ── VIAJES & TRANSPORTE ──
+  // ══════════════════════════════════════════════════════════════
+  { id: 'tr-1', char: '✈️', name: 'Avión Despegando', category: 'transporte', tags: ['avion', 'viaje', 'vuelo', 'vacaciones'] },
+  { id: 'tr-2', char: '🚀', name: 'Cohete Espacial', category: 'transporte', tags: ['cohete', 'espacio', 'rapido', 'lanzamiento'] },
+  { id: 'tr-3', char: '🚗', name: 'Coche Rojo', category: 'transporte', tags: ['coche', 'carro', 'auto', 'conducir'] },
+  { id: 'tr-4', char: '🏍️', name: 'Moto Deportiva', category: 'transporte', tags: ['moto', 'velocidad', 'motocicleta', 'deporte'] },
+  { id: 'tr-5', char: '🚢', name: 'Barco Crucero', category: 'transporte', tags: ['barco', 'crucero', 'mar', 'viaje'] },
+  { id: 'tr-6', char: '🚂', name: 'Tren Locomotora', category: 'transporte', tags: ['tren', 'locomotora', 'viaje', 'ferrocarril'] },
+  { id: 'tr-7', char: '🗺️', name: 'Mapa del Mundo', category: 'transporte', tags: ['mapa', 'mundo', 'viaje', 'explorar'] },
+  { id: 'tr-8', char: '🏔️', name: 'Montaña Nevada', category: 'transporte', tags: ['montaña', 'nieve', 'aventura', 'naturaleza'] },
+  { id: 'tr-9', char: '🏖️', name: 'Playa Tropical', category: 'transporte', tags: ['playa', 'sombrilla', 'vacaciones', 'verano'] },
+  { id: 'tr-10', char: '🗼', name: 'Torre Eiffel', category: 'transporte', tags: ['torre', 'paris', 'francia', 'viaje'] },
+  { id: 'tr-11', char: '🎡', name: 'Noria Rueda de la Fortuna', category: 'transporte', tags: ['noria', 'parque', 'diversiones', 'feria'] },
+  { id: 'tr-12', char: '⛵', name: 'Velero en el Mar', category: 'transporte', tags: ['velero', 'barco', 'mar', 'viento'] },
+
+  // ══════════════════════════════════════════════════════════════
+  // ── BANDERAS & SÍMBOLOS NACIONALES ──
+  // ══════════════════════════════════════════════════════════════
+  { id: 'bn-1', char: '🏁', name: 'Bandera a Cuadros', category: 'banderas', tags: ['bandera', 'carrera', 'meta', 'final'] },
+  { id: 'bn-2', char: '🏳️', name: 'Bandera Blanca Paz', category: 'banderas', tags: ['bandera', 'blanca', 'paz', 'rendirse'] },
+  { id: 'bn-3', char: '🏴', name: 'Bandera Negra Pirata', category: 'banderas', tags: ['bandera', 'negra', 'pirata', 'rebel'] },
+  { id: 'bn-4', char: '🚩', name: 'Bandera Roja Triangular', category: 'banderas', tags: ['bandera', 'roja', 'alerta', 'señal'] },
+  { id: 'bn-5', char: '🏳️‍🌈', name: 'Bandera Arcoíris', category: 'banderas', tags: ['bandera', 'arcoiris', 'pride', 'diversidad'] },
+  { id: 'bn-6', char: '🎌', name: 'Banderas Cruzadas', category: 'banderas', tags: ['bandera', 'cruzadas', 'celebracion', 'japon'] },
+  { id: 'bn-7', char: '⚑', name: 'Banderín Negro Sólido', category: 'banderas', tags: ['bandera', 'solido', 'negro'] },
+  { id: 'bn-8', char: '⚐', name: 'Banderín Blanco Hueco', category: 'banderas', tags: ['bandera', 'hueco', 'blanco'] },
 ];
 
 export const READY_COMBOS: ReadyCombo[] = [
@@ -448,6 +548,16 @@ export const READY_COMBOS: ReadyCombo[] = [
   { id: 'rc-18', combo: '౨ৎ Princesa ౨ৎ', name: 'Mariposa Coquette', category: 'aesthetic' },
   { id: 'rc-19', combo: '🔥 ᴅᴇᴀᴛʜ ☠️', name: 'Muerte Ígnea', category: 'gaming' },
   { id: 'rc-20', combo: '✨ 𝒱𝒾𝒷𝑒𝓈 ✨', name: 'Vibras Mágicas', category: 'aesthetic' },
+  { id: 'rc-21', combo: '🌸 ♡ Primavera ♡ 🌸', name: 'Florecimiento', category: 'aesthetic' },
+  { id: 'rc-22', combo: '💎 ━━ VIP ━━ 💎', name: 'Diamante VIP', category: 'enmarcado' },
+  { id: 'rc-23', combo: '🏆 ★ Campeón ★ 🏆', name: 'Campeón Dorado', category: 'gaming' },
+  { id: 'rc-24', combo: '✧˚. ༘⋆ 𝒟𝓇𝑒𝒶𝓂𝓈 ✧˚. ༘⋆', name: 'Sueños Cósmicos', category: 'aesthetic' },
+  { id: 'rc-25', combo: '《 ☬ Guerrero ☬ 》', name: 'Guerrero Legendario', category: 'gaming' },
+  { id: 'rc-26', combo: '🦋 ✦ Libre ✦ 🦋', name: 'Mariposa Libre', category: 'aesthetic' },
+  { id: 'rc-27', combo: '♫ ♪ Música ♪ ♫', name: 'Melodía Musical', category: 'aesthetic' },
+  { id: 'rc-28', combo: '🔮 ✦ Mística ✦ 🔮', name: 'Poder Místico', category: 'aesthetic' },
+  { id: 'rc-29', combo: '🌙 ☆ Noche ☆ 🌙', name: 'Noche Estrellada', category: 'aesthetic' },
+  { id: 'rc-30', combo: '⟡ ── ⟡ ── ⟡', name: 'Diamantes en Línea', category: 'separador' },
 ];
 
 export function searchMasterSymbols(query: string, category: MasterSymbolCategory): GeneralSymbol[] {

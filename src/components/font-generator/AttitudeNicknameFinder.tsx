@@ -21,6 +21,7 @@ import {
   ClearIcon,
   SparklesIcon,
 } from "@/components/ui/Icons";
+import { copyText } from "@/lib/clipboard";
 
 export const AttitudeNicknameFinder: React.FC = () => {
   const [selectedVibe, setSelectedVibe] = useState<AttitudeVibe>("all");
@@ -165,20 +166,14 @@ export const AttitudeNicknameFinder: React.FC = () => {
 
   const handleCopy = async (id: string, text: string, name: string) => {
     try {
-      await navigator.clipboard.writeText(text);
-      setCopiedId(id);
-      setAriaLiveAnnouncement(`${name} copied to clipboard`);
-      setTimeout(() => setCopiedId(null), 2000);
+      const ok = await copyText(text);
+      if (ok) {
+        setCopiedId(id);
+        setAriaLiveAnnouncement(`${name} copied to clipboard`);
+        setTimeout(() => setCopiedId(null), 2000);
+      }
     } catch {
-      const textArea = document.createElement("textarea");
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textArea);
-      setCopiedId(id);
-      setAriaLiveAnnouncement(`${name} copied to clipboard`);
-      setTimeout(() => setCopiedId(null), 2000);
+      // Fallback
     }
   };
 

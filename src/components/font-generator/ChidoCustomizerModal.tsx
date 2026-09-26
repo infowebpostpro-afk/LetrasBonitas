@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChidoItem } from '@/lib/gamingNames/nombresChidosData';
+import { copyText } from '@/lib/clipboard';
 
 interface ChidoCustomizerModalProps {
   isOpen: boolean;
@@ -55,9 +56,11 @@ export const ChidoCustomizerModal: React.FC<ChidoCustomizerModalProps> = ({
 
   const handleCopy = async (text: string, id: string) => {
     try {
-      await navigator.clipboard.writeText(text);
-      setCopiedId(id);
-      setTimeout(() => setCopiedId(null), 1800);
+      const ok = await copyText(text);
+      if (ok) {
+        setCopiedId(id);
+        setTimeout(() => setCopiedId(null), 1800);
+      }
     } catch {
       // Fallback
     }

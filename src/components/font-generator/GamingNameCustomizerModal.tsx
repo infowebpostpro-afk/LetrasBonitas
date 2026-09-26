@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { GAMING_DECORATION_PRESETS } from "@/lib/gamingNames/gamingNameData";
 import { charCount } from "@/lib/unicode";
 import { CheckIcon, CopyIcon } from "@/components/ui/Icons";
+import { copyText } from "@/lib/clipboard";
 
 interface GamingNameCustomizerModalProps {
   name: string;
@@ -40,23 +41,15 @@ export const GamingNameCustomizerModal: React.FC<GamingNameCustomizerModalProps>
 
   const handleCopy = async (id: string, text: string) => {
     try {
-      await navigator.clipboard.writeText(text);
-      setCopiedId(id);
-      setTimeout(() => {
-        setCopiedId((curr) => (curr === id ? null : curr));
-      }, 1800);
+      const ok = await copyText(text);
+      if (ok) {
+        setCopiedId(id);
+        setTimeout(() => {
+          setCopiedId((curr) => (curr === id ? null : curr));
+        }, 1800);
+      }
     } catch {
       // Fallback
-      const textarea = document.createElement("textarea");
-      textarea.value = text;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textarea);
-      setCopiedId(id);
-      setTimeout(() => {
-        setCopiedId((curr) => (curr === id ? null : curr));
-      }, 1800);
     }
   };
 

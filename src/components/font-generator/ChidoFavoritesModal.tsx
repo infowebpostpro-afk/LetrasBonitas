@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChidoItem } from '@/lib/gamingNames/nombresChidosData';
+import { copyText } from '@/lib/clipboard';
 
 interface ChidoFavoritesModalProps {
   isOpen: boolean;
@@ -25,9 +26,11 @@ export const ChidoFavoritesModal: React.FC<ChidoFavoritesModalProps> = ({
 
   const copySingle = async (name: string, id: string) => {
     try {
-      await navigator.clipboard.writeText(name);
-      setCopiedId(id);
-      setTimeout(() => setCopiedId(null), 1800);
+      const ok = await copyText(name);
+      if (ok) {
+        setCopiedId(id);
+        setTimeout(() => setCopiedId(null), 1800);
+      }
     } catch {
       // Fallback
     }
@@ -39,9 +42,11 @@ export const ChidoFavoritesModal: React.FC<ChidoFavoritesModalProps> = ({
         .map((item, idx) => `${idx + 1}. ${item.name} (${item.name.length} letras - ${item.vibe})`)
         .join('\n');
       const textToCopy = `🎮 Mis Nombres Gamer Favoritos:\n${listText}\n\nCreados en LetrasBonitas`;
-      await navigator.clipboard.writeText(textToCopy);
-      setAllCopied(true);
-      setTimeout(() => setAllCopied(false), 2000);
+      const ok = await copyText(textToCopy);
+      if (ok) {
+        setAllCopied(true);
+        setTimeout(() => setAllCopied(false), 2000);
+      }
     } catch {
       // Fallback
     }

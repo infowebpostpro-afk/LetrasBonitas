@@ -3,6 +3,7 @@
 import React, { useState, useId } from "react";
 import { generateAttitudeStyles } from "@/lib/freeFire/attitudeNicknamesData";
 import { CopyIcon, CheckIcon, ClearIcon } from "@/components/ui/Icons";
+import { copyText } from "@/lib/clipboard";
 
 interface AttitudeCustomizerModalProps {
   initialName: string;
@@ -91,21 +92,14 @@ export const AttitudeCustomizerModal: React.FC<AttitudeCustomizerModalProps> = (
 
   const handleCopy = async (id: string, text: string) => {
     try {
-      await navigator.clipboard.writeText(text);
-      setCopiedId(id);
-      if (onCopySuccess) onCopySuccess(text);
-      setTimeout(() => setCopiedId(null), 2200);
+      const ok = await copyText(text);
+      if (ok) {
+        setCopiedId(id);
+        if (onCopySuccess) onCopySuccess(text);
+        setTimeout(() => setCopiedId(null), 2200);
+      }
     } catch {
-      // Clipboard fallback
-      const textArea = document.createElement("textarea");
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textArea);
-      setCopiedId(id);
-      if (onCopySuccess) onCopySuccess(text);
-      setTimeout(() => setCopiedId(null), 2200);
+      // Fallback
     }
   };
 

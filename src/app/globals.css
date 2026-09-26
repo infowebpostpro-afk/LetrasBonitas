@@ -727,6 +727,85 @@ img {
   box-shadow: var(--shadow-sm);
 }
 
+/* ── Sticky Workspace Bar (Symbols Accumulator) ── */
+.tool-panel--sticky-workspace {
+  position: sticky;
+  top: 62px;
+  z-index: 35;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 10px 30px -6px rgba(0, 0, 0, 0.08), 0 4px 8px -2px rgba(0, 0, 0, 0.03);
+  margin-bottom: var(--space-4);
+  transition: top 0.2s ease, box-shadow 0.2s ease;
+}
+
+.workspace-sticky-input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 2.5rem 0 1rem;
+  font-size: 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface-2);
+  color: var(--color-ink);
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.workspace-sticky-input:focus {
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.workspace-clear-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 4px;
+}
+
+.workspace-clear-btn:hover {
+  color: var(--color-ink);
+}
+
+@media (max-width: 640px) {
+  .tool-panel--sticky-workspace {
+    top: 54px;
+    padding: 0.75rem 0.85rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .tool-panel--sticky-workspace .font-input__label {
+    font-size: 0.78rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .workspace-sticky-input {
+    min-height: 42px;
+    font-size: 0.95rem;
+  }
+
+  .workspace-sticky-tip {
+    display: none;
+  }
+
+  .workspace-sticky-meta {
+    margin-top: 0.4rem;
+  }
+}
+
+
 
 /* ════════════════════════════════════════════
    FONT INPUT (Text Editor)
@@ -1543,7 +1622,7 @@ img {
 .internal-link-card {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-3.5);
+  gap: 0.875rem;
   padding: var(--space-4);
   background: var(--color-surface-elevated);
   border: 1px solid var(--color-border);
@@ -2519,7 +2598,7 @@ footer a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-brand-ink);
-  margin-bottom: var(--space-2.5);
+  margin-bottom: 0.625rem;
   display: flex;
   align-items: center;
   gap: 0.35rem;
@@ -2665,7 +2744,7 @@ footer a {
 }
 
 .bio-profile-card__content {
-  padding: var(--space-3.5);
+  padding: 0.875rem;
   background: var(--color-surface, #ffffff);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -2766,7 +2845,7 @@ footer a {
 .symbol-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-2.5);
+  gap: 0.625rem;
   margin-bottom: var(--space-6);
 }
 
@@ -2849,7 +2928,7 @@ footer a {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
-  padding: var(--space-3.5) var(--space-4);
+  padding: 0.875rem var(--space-4);
   background: linear-gradient(135deg, #0f8f87 0%, #14b8a6 100%);
   color: #ffffff;
   border-radius: var(--radius-2xl);
@@ -2888,7 +2967,7 @@ footer a {
   align-items: center;
   gap: 0.35rem;
   flex-wrap: wrap;
-  margin-top: var(--space-2.5);
+  margin-top: 0.625rem;
   margin-bottom: var(--space-3);
 }
 

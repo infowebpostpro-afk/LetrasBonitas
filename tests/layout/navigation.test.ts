@@ -6,13 +6,14 @@ import {
 } from "@/lib/navigationData";
 
 describe("Navigation Architecture & Centralized Data", () => {
-  it("defines the 3 core approved silos", () => {
-    expect(SILO_NAVIGATION.length).toBe(3);
+  it("defines the core approved silos", () => {
+    expect(SILO_NAVIGATION.length).toBe(4);
     const siloIds = SILO_NAVIGATION.map((s) => s.id);
     expect(siloIds).toEqual([
       "letras-cursivas",
       "conversor-de-letras",
       "letras-para-instagram",
+      "nombres-para-free-fire",
     ]);
   });
 

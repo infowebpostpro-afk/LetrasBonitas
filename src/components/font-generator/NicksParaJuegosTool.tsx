@@ -20,6 +20,7 @@ import {
   ClearIcon,
   SparklesIcon,
 } from "@/components/ui/Icons";
+import { copyText } from "@/lib/clipboard";
 
 interface SavedNickItem {
   id: string;
@@ -113,20 +114,14 @@ export const NicksParaJuegosTool: React.FC = () => {
   // One-tap copy
   const handleCopy = async (id: string, text: string) => {
     try {
-      await navigator.clipboard.writeText(text);
-      setCopiedId(id);
-      setAriaLiveAnnouncement(`${text} copiado al portapapeles`);
-      setTimeout(() => setCopiedId(null), 2000);
+      const ok = await copyText(text);
+      if (ok) {
+        setCopiedId(id);
+        setAriaLiveAnnouncement(`${text} copiado al portapapeles`);
+        setTimeout(() => setCopiedId(null), 2000);
+      }
     } catch {
-      const textArea = document.createElement("textarea");
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textArea);
-      setCopiedId(id);
-      setAriaLiveAnnouncement(`${text} copiado al portapapeles`);
-      setTimeout(() => setCopiedId(null), 2000);
+      // Fallback
     }
   };
 
@@ -640,11 +635,13 @@ export const NicksParaJuegosTool: React.FC = () => {
                 </button>
                 <button
                   type="button"
-                  onClick={() => {
+                  onClick={async () => {
                     const allText = favorites.map((f) => f.name).join("\n");
-                    navigator.clipboard.writeText(allText);
-                    setAriaLiveAnnouncement("Todos los nicks guardados copiados");
-                    alert("¡Todos los nicks guardados han sido copiados!");
+                    const ok = await copyText(allText);
+                    if (ok) {
+                      setAriaLiveAnnouncement("Todos los nicks guardados copiados");
+                      alert("¡Todos los nicks guardados han sido copiados!");
+                    }
                   }}
                   className="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg font-semibold transition-colors"
                 >

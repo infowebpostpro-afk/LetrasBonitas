@@ -3,6 +3,7 @@
 import React, { useState, useId, useEffect } from "react";
 import { generateNickStyles } from "@/lib/gamingNames/nicksJuegosData";
 import { CopyIcon, CheckIcon, ClearIcon } from "@/components/ui/Icons";
+import { copyText } from "@/lib/clipboard";
 
 interface NicksCustomizerModalProps {
   initialName: string;
@@ -82,20 +83,14 @@ export const NicksCustomizerModal: React.FC<NicksCustomizerModalProps> = ({
 
   const handleCopy = async (id: string, text: string) => {
     try {
-      await navigator.clipboard.writeText(text);
-      setCopiedId(id);
-      if (onCopySuccess) onCopySuccess(text);
-      setTimeout(() => setCopiedId(null), 2000);
+      const ok = await copyText(text);
+      if (ok) {
+        setCopiedId(id);
+        if (onCopySuccess) onCopySuccess(text);
+        setTimeout(() => setCopiedId(null), 2000);
+      }
     } catch {
-      const textArea = document.createElement("textarea");
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textArea);
-      setCopiedId(id);
-      if (onCopySuccess) onCopySuccess(text);
-      setTimeout(() => setCopiedId(null), 2000);
+      // Fallback
     }
   };
 

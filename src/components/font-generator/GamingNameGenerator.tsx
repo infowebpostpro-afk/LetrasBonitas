@@ -15,6 +15,7 @@ import {
   ClearIcon,
   SparklesIcon,
 } from "@/components/ui/Icons";
+import { copyText } from "@/lib/clipboard";
 
 interface GeneratedNameItem {
   id: string;
@@ -108,24 +109,16 @@ export const GamingNameGenerator: React.FC = () => {
   // Copy handler with independent card state and aria announcement
   const handleCopy = async (id: string, text: string) => {
     try {
-      await navigator.clipboard.writeText(text);
-      setCopiedId(id);
-      setAriaLiveAnnouncement(`Nombre ${text} copiado al portapapeles`);
-      setTimeout(() => {
-        setCopiedId((curr) => (curr === id ? null : curr));
-      }, 1800);
+      const ok = await copyText(text);
+      if (ok) {
+        setCopiedId(id);
+        setAriaLiveAnnouncement(`Nombre ${text} copiado al portapapeles`);
+        setTimeout(() => {
+          setCopiedId((curr) => (curr === id ? null : curr));
+        }, 1800);
+      }
     } catch {
-      const textarea = document.createElement("textarea");
-      textarea.value = text;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textarea);
-      setCopiedId(id);
-      setAriaLiveAnnouncement(`Nombre ${text} copiado al portapapeles`);
-      setTimeout(() => {
-        setCopiedId((curr) => (curr === id ? null : curr));
-      }, 1800);
+      // Fallback
     }
   };
 

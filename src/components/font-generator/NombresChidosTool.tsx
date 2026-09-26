@@ -12,6 +12,7 @@ import {
 } from '@/lib/gamingNames/nombresChidosData';
 import { ChidoCustomizerModal } from './ChidoCustomizerModal';
 import { ChidoFavoritesModal } from './ChidoFavoritesModal';
+import { copyText } from '@/lib/clipboard';
 
 const VIBES: { id: ChidoVibe; label: string; icon: string }[] = [
   { id: 'todos', label: 'Todos', icon: '⚡' },
@@ -121,10 +122,12 @@ export const NombresChidosTool: React.FC = () => {
 
   const handleCopy = async (name: string, id: string) => {
     try {
-      await navigator.clipboard.writeText(name);
-      setCopiedId(id);
-      setLiveAnnouncement(`Nombre ${name} copiado al portapapeles`);
-      setTimeout(() => setCopiedId(null), 1800);
+      const ok = await copyText(name);
+      if (ok) {
+        setCopiedId(id);
+        setLiveAnnouncement(`Nombre ${name} copiado al portapapeles`);
+        setTimeout(() => setCopiedId(null), 1800);
+      }
     } catch {
       // Fallback
     }

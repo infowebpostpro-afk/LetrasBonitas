@@ -10,6 +10,7 @@ import {
 } from '@/lib/gamingNames/clanesJuegosData';
 import { ClanShortlistModal } from './ClanShortlistModal';
 import { ClanCustomizerModal } from './ClanCustomizerModal';
+import { copyText } from '@/lib/clipboard';
 
 const STYLES: { id: ClanStyle; label: string; icon: string }[] = [
   { id: 'todos', label: 'Todos', icon: '⚡' },
@@ -105,10 +106,12 @@ export const NombresParaClanesTool: React.FC = () => {
 
   const handleCopyName = async (name: string, id: string) => {
     try {
-      await navigator.clipboard.writeText(name);
-      setCopyFeedback(`name-${id}`);
-      setLiveAnnouncement(`Nombre ${name} copiado`);
-      setTimeout(() => setCopyFeedback(null), 1800);
+      const ok = await copyText(name);
+      if (ok) {
+        setCopyFeedback(`name-${id}`);
+        setLiveAnnouncement(`Nombre ${name} copiado`);
+        setTimeout(() => setCopyFeedback(null), 1800);
+      }
     } catch {
       // Fallback
     }
@@ -116,10 +119,12 @@ export const NombresParaClanesTool: React.FC = () => {
 
   const handleCopyTag = async (tag: string, id: string) => {
     try {
-      await navigator.clipboard.writeText(`[${tag}]`);
-      setCopyFeedback(`tag-${id}`);
-      setLiveAnnouncement(`TAG [${tag}] copiada`);
-      setTimeout(() => setCopyFeedback(null), 1800);
+      const ok = await copyText(`[${tag}]`);
+      if (ok) {
+        setCopyFeedback(`tag-${id}`);
+        setLiveAnnouncement(`TAG [${tag}] copiada`);
+        setTimeout(() => setCopyFeedback(null), 1800);
+      }
     } catch {
       // Fallback
     }
@@ -127,10 +132,12 @@ export const NombresParaClanesTool: React.FC = () => {
 
   const handleCopyIdentity = async (name: string, tag: string, id: string) => {
     try {
-      await navigator.clipboard.writeText(`${name} [${tag}]`);
-      setCopyFeedback(`all-${id}`);
-      setLiveAnnouncement(`Identidad completa ${name} [${tag}] copiada`);
-      setTimeout(() => setCopyFeedback(null), 1800);
+      const ok = await copyText(`${name} [${tag}]`);
+      if (ok) {
+        setCopyFeedback(`all-${id}`);
+        setLiveAnnouncement(`Identidad completa ${name} [${tag}] copiada`);
+        setTimeout(() => setCopyFeedback(null), 1800);
+      }
     } catch {
       // Fallback
     }

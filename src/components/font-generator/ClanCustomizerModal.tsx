@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ClanItem } from '@/lib/gamingNames/clanesJuegosData';
+import { copyText } from '@/lib/clipboard';
 
 interface ClanCustomizerModalProps {
   isOpen: boolean;
@@ -68,9 +69,11 @@ export const ClanCustomizerModal: React.FC<ClanCustomizerModalProps> = ({
 
   const handleCopy = async (text: string, id: string) => {
     try {
-      await navigator.clipboard.writeText(text);
-      setCopiedVariant(id);
-      setTimeout(() => setCopiedVariant(null), 1800);
+      const ok = await copyText(text);
+      if (ok) {
+        setCopiedVariant(id);
+        setTimeout(() => setCopiedVariant(null), 1800);
+      }
     } catch {
       // Fallback
     }

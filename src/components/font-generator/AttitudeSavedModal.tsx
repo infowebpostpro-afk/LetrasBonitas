@@ -2,6 +2,7 @@
 
 import React, { useState, useId } from "react";
 import { CopyIcon, CheckIcon, ClearIcon } from "@/components/ui/Icons";
+import { copyText } from "@/lib/clipboard";
 
 export interface SavedCandidateItem {
   id: string;
@@ -35,18 +36,13 @@ export const AttitudeSavedModal: React.FC<AttitudeSavedModalProps> = ({
 
   const handleCopy = async (id: string, text: string) => {
     try {
-      await navigator.clipboard.writeText(text);
-      setCopiedId(id);
-      setTimeout(() => setCopiedId(null), 2000);
+      const ok = await copyText(text);
+      if (ok) {
+        setCopiedId(id);
+        setTimeout(() => setCopiedId(null), 2000);
+      }
     } catch {
-      const textArea = document.createElement("textarea");
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textArea);
-      setCopiedId(id);
-      setTimeout(() => setCopiedId(null), 2000);
+      // Fallback
     }
   };
 
@@ -54,9 +50,11 @@ export const AttitudeSavedModal: React.FC<AttitudeSavedModalProps> = ({
     if (favorites.length === 0) return;
     const allText = favorites.map((f) => f.name).join("\n");
     try {
-      await navigator.clipboard.writeText(allText);
-      setCopiedAll(true);
-      setTimeout(() => setCopiedAll(false), 2000);
+      const ok = await copyText(allText);
+      if (ok) {
+        setCopiedAll(true);
+        setTimeout(() => setCopiedAll(false), 2000);
+      }
     } catch {
       // fallback
     }

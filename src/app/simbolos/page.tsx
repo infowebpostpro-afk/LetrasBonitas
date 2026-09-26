@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { SimbolosWorkspaceTool } from '@/components/font-generator/SimbolosWorkspaceTool';
 
 export const metadata: Metadata = {
@@ -72,392 +73,331 @@ export default function SimbolosPage() {
           },
         ],
       },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://letrasbonits.com/simbolos/#faq',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '¿Cómo puedo copiar un símbolo?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Busca el carácter que quieras y pulsa sobre él. Se copiará automáticamente al portapapeles y se añadirá al campo de texto superior.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Puedo combinar varios símbolos?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sí. Haz clic en varios símbolos sucesivamente para armar tu secuencia y pulsa Copiar Todo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Puedo poner mi nombre entre símbolos?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sí. Escribe tu nombre en el campo de texto superior y selecciona los símbolos que quieras colocar alrededor.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Los símbolos son imágenes?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. Son caracteres tipográficos de la norma Unicode, lo que permite copiarlos y pegarlos como texto plano en cualquier aplicación compatible.',
+            },
+          },
+        ],
+      },
     ],
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
+    <main className="page-shell">
       {/* JSON-LD Script */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        {/* Breadcrumb Navigation */}
-        <nav aria-label="Ruta de navegación" className="mb-6">
-          <ol className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-slate-400">
-            <li>
-              <Link href="/" className="hover:text-cyan-400 transition-colors">
-                Inicio
-              </Link>
-            </li>
-            <li className="text-slate-600">/</li>
-            <li className="text-cyan-400 font-semibold" aria-current="page">
-              Símbolos
-            </li>
-          </ol>
-        </nav>
-
-        {/* Page Header */}
-        <header className="mb-8 sm:mb-10 text-center sm:text-left">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-semibold mb-3">
-            <span>✦ ♡ ★</span>
-            <span>Biblioteca y Combinador de Símbolos</span>
-          </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
-            Símbolos para Copiar y Pegar
+      {/* ═══ COMPACT SAAS HERO (Consistent with all website pages) ═══ */}
+      <header className="hero-saas hero-saas--compact">
+        <div className="hero-saas__watermark-right" aria-hidden="true">
+          ♡ ★ ✦
+        </div>
+        <div className="hero-saas__content">
+          <Breadcrumbs
+            items={[
+              { label: 'Inicio', href: '/' },
+              { label: 'Símbolos', href: '/simbolos/' },
+            ]}
+          />
+          <span className="hero-saas__badge">✦ BIBLIOTECA DE SÍMBOLOS</span>
+          <h1 className="hero-saas__title">
+            Símbolos para <span className="gradient-text-cyan">Copiar y Pegar</span>
           </h1>
-          <p className="text-slate-300 text-base sm:text-lg max-w-3xl leading-relaxed">
-            Encuentra emojis populares, caritas kaomoji, corazones, estrellas, flechas, flores, símbolos aesthetic y más. Toca cualquier símbolo o emoji para copiarlo al instante, o usa <strong>+ Añadir</strong> para preparar tu combinación personalizada con tu propio texto.
+          <p className="hero-saas__lead">
+            Explora y copia símbolos bonitos, emojis, corazones, estrellas y flechas. Haz clic en cualquier símbolo para copiarlo al instante.
           </p>
-        </header>
+        </div>
+      </header>
 
-        {/* Interactive Tool Component */}
-        <SimbolosWorkspaceTool />
+      {/* ═══ PRIMARY INTERACTIVE TOOL DIRECTLY UNDER HERO ═══ */}
+      <SimbolosWorkspaceTool />
 
-        {/* Specialized Routing Banner */}
-        <section className="my-10 p-5 rounded-2xl bg-slate-900/70 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+      {/* ═══ SPECIALIZED ROUTING SUGGESTIONS ═══ */}
+      <div className="prose-card mb-8">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <h3 className="text-sm font-bold text-white flex items-center gap-2">
+            <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2 m-0">
               <span>🎯</span>
               <span>¿Buscas símbolos optimizados para un entorno específico?</span>
             </h3>
-            <p className="text-xs text-slate-400 mt-1">
-              Esta es nuestra biblioteca general. Si necesitas decoraciones adaptadas a una plataforma concreta:
+            <p className="text-xs text-slate-500 mt-1 m-0">
+              Esta es nuestra biblioteca general. Si buscas símbolos específicos para tu juego o red social favorita:
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-2.5 w-full sm:w-auto">
+          <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+            <Link
+              href="/simbolos/bonitos/"
+              className="text-xs px-3.5 py-2 rounded-lg font-semibold bg-pink-50 text-pink-700 hover:bg-pink-100 transition-colors"
+            >
+              Símbolos Bonitos
+            </Link>
+            <Link
+              href="/simbolos/aesthetic/"
+              className="text-xs px-3.5 py-2 rounded-lg font-semibold bg-rose-50 text-rose-700 hover:bg-rose-100 transition-colors"
+            >
+              Símbolos Aesthetic
+            </Link>
+            <Link
+              href="/simbolos/especiales/"
+              className="text-xs px-3.5 py-2 rounded-lg font-semibold bg-indigo-50 text-indigo-700 hover:bg-indigo-100 transition-colors"
+            >
+              Símbolos Especiales
+            </Link>
             <Link
               href="/letras-para-instagram/simbolos-para-instagram/"
-              className="text-xs px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 hover:text-white font-semibold border border-slate-700 transition-colors"
+              className="text-xs px-3.5 py-2 rounded-lg font-semibold bg-indigo-50 text-indigo-700 hover:bg-indigo-100 transition-colors"
             >
               Símbolos para Instagram
             </Link>
             <Link
               href="/nombres-para-free-fire/simbolos/"
-              className="text-xs px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 hover:text-white font-semibold border border-slate-700 transition-colors"
+              className="text-xs px-3.5 py-2 rounded-lg font-semibold bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors"
             >
               Símbolos para Free Fire
             </Link>
             <Link
               href="/conversor-de-letras/"
-              className="text-xs px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white font-semibold border border-slate-700 transition-colors"
+              className="text-xs px-3.5 py-2 rounded-lg font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
             >
               Conversor de Letras
             </Link>
           </div>
+        </div>
+      </div>
+
+      {/* ═══ COMPLETE MASTER ARTICLE & SEO CONTENT ═══ */}
+      <article className="prose-section" aria-label="Guía completa sobre símbolos para copiar y pegar">
+        {/* Section 1: Intro */}
+        <section className="prose-card">
+          <h2>Símbolos Bonitos para Copiar y Pegar</h2>
+          <p>
+            Encontrar el símbolo exacto puede ser difícil cuando no aparece en el teclado de tu ordenador o teléfono. Tal vez recuerdas que era una estrella, un corazón, una corona o una flecha, pero no sabes cómo escribirlo ni dónde encontrarlo rápidamente.
+          </p>
+          <p>
+            Con el selector de <Link href="/" className="text-indigo-600 hover:underline font-semibold">LetrasBonitas</Link> puedes explorar cientos de caracteres organizados por categoría, buscar exactamente lo que necesitas y copiarlo con un solo clic. También puedes escribir tu propio texto para armar una combinación lista para redes sociales, biografías o nombres de usuario.
+          </p>
         </section>
 
-        {/* Main Publication-Ready Article */}
-        <article className="prose prose-invert prose-cyan max-w-none mt-12 space-y-8 text-slate-300 text-sm sm:text-base leading-relaxed">
-          {/* Section 1 */}
-          <div className="border-b border-slate-800/80 pb-8">
-            <p>
-              Encontrar el símbolo exacto puede ser difícil cuando no aparece en el teclado. Tal vez recuerdas que era una estrella, un corazón, una corona o una flecha, pero no sabes cómo escribirlo ni dónde buscarlo.
-            </p>
-            <p className="mt-4">
-              Con el selector de <Link href="/" className="text-cyan-400 hover:underline">LetrasBonitas</Link> puedes explorar símbolos por categoría, buscar el que necesitas y copiarlo con un toque. También puedes añadir varios a <strong>Mi combinación</strong>, escribir tu propio texto y preparar una decoración completa antes de copiarla.
-            </p>
+        {/* Section 2: Showcase Examples */}
+        <section className="prose-card">
+          <h2>Ejemplos de Símbolos por Estilo</h2>
+          <p>
+            Aquí tienes algunos ejemplos de los tipos de símbolos que puedes encontrar y copiar directamente desde nuestra herramienta:
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 my-2">
+            {[
+              { title: 'Corazones', symbols: '♡ ♥ ❤ ❥ ❣ ❦ ღ ෆ', color: 'bg-rose-50 border-rose-200 text-rose-700' },
+              { title: 'Estrellas & Brillos', symbols: '★ ☆ ✦ ✧ ✩ ✰ ⋆ ⟡', color: 'bg-amber-50 border-amber-200 text-amber-700' },
+              { title: 'Flores & Naturaleza', symbols: '✿ ❀ ❁ ✾ ❃ ⚘ ❋', color: 'bg-pink-50 border-pink-200 text-pink-700' },
+              { title: 'Lunas & Cielo', symbols: '☾ ☽ ☼ ☀ ☁ ☄ ⚡', color: 'bg-sky-50 border-sky-200 text-sky-700' },
+              { title: 'Flechas & Puntos', symbols: '→ ← ↑ ↓ ↗ ↘ ➜ ➤', color: 'bg-emerald-50 border-emerald-200 text-emerald-700' },
+              { title: 'Coronas & Realeza', symbols: '♔ ♕ ♚ ♛ ⚜ 👑', color: 'bg-yellow-50 border-yellow-200 text-yellow-700' },
+              { title: 'Caras & Emociones', symbols: '😊 😍 🤩 😎 🥳 😈', color: 'bg-indigo-50 border-indigo-200 text-indigo-700' },
+              { title: 'Comida & Bebida', symbols: '🍕 🍔 🍩 🍰 🍦 ☕', color: 'bg-orange-50 border-orange-200 text-orange-700' },
+            ].map(card => (
+              <div key={card.title} className={`p-4 rounded-xl border ${card.color} transition-all`}>
+                <h3 className="text-xs uppercase font-bold mb-1 tracking-wider">{card.title}</h3>
+                <p className="text-lg font-bold tracking-wider m-0 text-slate-800">{card.symbols}</p>
+              </div>
+            ))}
           </div>
 
-          {/* Section 2: Ready examples */}
-          <div className="border-b border-slate-800/80 pb-8 space-y-6">
-            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Símbolos bonitos para copiar y pegar
-            </h2>
-            <p>
-              Aquí tienes algunos ejemplos de los tipos de símbolos que puedes explorar con la herramienta:
-            </p>
+          <p>
+            No tienes que seleccionar caracteres manualmente con el cursor ni memorizar códigos difíciles. Simplemente toca cualquier tarjeta y el carácter estará copiado en tu portapapeles al instante.
+          </p>
+        </section>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 my-4">
-              <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl">
-                <h3 className="text-xs uppercase font-bold text-cyan-400 mb-1">Corazones</h3>
-                <p className="text-xl font-bold text-white tracking-wider">♡ ♥ ❤ ❥ ❣ ❦ ღ ෆ</p>
-              </div>
-              <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl">
-                <h3 className="text-xs uppercase font-bold text-cyan-400 mb-1">Estrellas y destellos</h3>
-                <p className="text-xl font-bold text-white tracking-wider">★ ☆ ✦ ✧ ✩ ✰ ⋆ ⟡</p>
-              </div>
-              <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl">
-                <h3 className="text-xs uppercase font-bold text-cyan-400 mb-1">Flores</h3>
-                <p className="text-xl font-bold text-white tracking-wider">✿ ❀ ❁ ✾ ❃ ⚘ ❋</p>
-              </div>
-              <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl">
-                <h3 className="text-xs uppercase font-bold text-cyan-400 mb-1">Lunas y cielo</h3>
-                <p className="text-xl font-bold text-white tracking-wider">☾ ☽ ☼ ☀ ☁ ☄ ⚡</p>
-              </div>
-              <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl">
-                <h3 className="text-xs uppercase font-bold text-cyan-400 mb-1">Flechas</h3>
-                <p className="text-xl font-bold text-white tracking-wider">→ ← ↑ ↓ ↗ ↘ ➜ ➤</p>
-              </div>
-              <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl">
-                <h3 className="text-xs uppercase font-bold text-cyan-400 mb-1">Coronas y realeza</h3>
-                <p className="text-xl font-bold text-white tracking-wider">♔ ♕ ♚ ♛ ⚜ 👑</p>
-              </div>
-              <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl">
-                <h3 className="text-xs uppercase font-bold text-cyan-400 mb-1">Marcos</h3>
-                <p className="text-xl font-bold text-white tracking-wider">『 』 【 】 ꧁ ꧂</p>
-              </div>
-              <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl">
-                <h3 className="text-xs uppercase font-bold text-cyan-400 mb-1">Separadores</h3>
-                <p className="text-xl font-bold text-white tracking-wider">• ─ ━ │ ┊ ｡･:*:･ﾟ</p>
-              </div>
-            </div>
+        {/* Section 3: Categories Breakdown */}
+        <section className="prose-card">
+          <h2>Encuentra Símbolos por Categoría</h2>
+          <p>
+            Una biblioteca amplia resulta verdaderamente útil cuando puedes encontrar lo que buscas en cuestión de segundos. Por eso en LetrasBonitas organizamos todos los símbolos según su forma y uso:
+          </p>
 
-            <p>
-              No tienes que seleccionar manualmente un carácter con el cursor. Busca una categoría, toca <strong>Copiar</strong> y después pégalo donde quieras probarlo. Si quieres construir algo más elaborado, utiliza <strong>+ Añadir</strong> en lugar de copiar cada elemento por separado.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-2">
+            {[
+              {
+                title: 'Corazones',
+                content: 'Los corazones funcionan como una decoración limpia y dulce alrededor de un nombre, una frase o una biografía (ej. ♡ ♥ ❤ ❥ ❦ ღ). Puedes usarlos solos (♡), alrededor de texto (♡ Sofía ♡) o combinados con destellos (✦ ♡ Sofía ♡ ✦).',
+              },
+              {
+                title: 'Estrellas y destellos',
+                content: 'Las estrellas son ideales cuando buscas una apariencia brillante y aesthetic (ej. ★ ☆ ✦ ✧ ✩ ✰ ⋆ ⟡). Una estrella sólida como ★ produce un impacto diferente a un destello ligero como ✧. Prueba ambos estilos alrededor de tu texto.',
+              },
+              {
+                title: 'Flechas',
+                content: 'Las flechas sirven tanto de adorno como para indicar dirección (ej. → ← ↑ ↓ ↗ ↘ ➜ ➤). Son perfectas para listas en biografías (✦ Inicio → Planes → Contacto) o para destacar enlaces.',
+              },
+              {
+                title: 'Flores y plantas',
+                content: 'Para una estética suave y primaveral puedes usar ✿ ❀ ❁ ✾ ❃ ⚘. Una flor pequeña suele ser suficiente para dar encanto sin sobrecargar la lectura del texto.',
+              },
+              {
+                title: 'Lunas y cielo',
+                content: 'Los símbolos astronómicos combinan excelente con nombres nocturnos y minimalistas (ej. ☾ ☽ ☼ ☀ ☁ ⚡). Prueba opciones como ☾ Luna ☽ o ✦ ☾ Nova ☽ ✦.',
+              },
+              {
+                title: 'Coronas y realeza',
+                content: 'Figuras de ajedrez y coronas heráldicas como ♔ ♕ ♚ ♛ ⚜ 👑 aportan autoridad y elegancia a los apodos (ej. ♛ Carlos ♛).',
+              },
+              {
+                title: 'Símbolos para gaming',
+                content: 'Para jugadores que buscan decorar su nick de Free Fire, Roblox o Discord (亗 ⚔ ☠ ⌖ ☣). Recuerda siempre verificar que el juego acepte el carácter antes de guardar tu nombre definitivo.',
+              },
+              {
+                title: 'Caras y Kaomojis',
+                content: 'Los emojis clásicos (😊 😍 😎 🥳) y las caritas japonesas Kaomoji (ฅ^•ﻌ•^ฅ, (｡♥‿♥｡), ദ്ദി(˵ •̀ ᴗ - ˵ )) transmiten emociones únicas que no se logran con texto simple.',
+              },
+            ].map((section, idx) => (
+              <div key={idx} className="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2 m-0 mb-1.5">
+                  <span className="w-2 h-2 rounded-full bg-indigo-600" />
+                  {section.title}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed m-0">{section.content}</p>
+              </div>
+            ))}
           </div>
+        </section>
 
-          {/* Section 3: Categories Breakdown */}
-          <div className="border-b border-slate-800/80 pb-8 space-y-6">
-            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Encuentra símbolos por categoría
-            </h2>
-            <p>
-              Una biblioteca grande resulta útil solamente cuando puedes encontrar lo que buscas rápidamente. Por eso LetrasBonitas organiza los caracteres según su apariencia y uso habitual.
-            </p>
+        {/* Section 4: Step by step instructions */}
+        <section className="prose-card">
+          <h2>Cómo Usar el Selector de Símbolos</h2>
+          <p>El funcionamiento es rápido, directo y pensado para no perder tiempo:</p>
 
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-white">Corazones</h3>
-              <p>
-                Los corazones pueden funcionar como una decoración sencilla alrededor de un nombre, una frase corta o una sección de una biografía (ej. <code>♡ ♥ ❤ ❥ ❦ ღ</code>). Puedes utilizarlos solos (<code>♡</code>), alrededor de texto (<code>♡ Sofía ♡</code>) o combinados con otros elementos (<code>✦ ♡ Sofía ♡ ✦</code>).
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-white">Estrellas y destellos</h3>
-              <p>
-                Las estrellas son ideales cuando buscas una decoración brillante, limpia o aesthetic (ej. <code>★ ☆ ✦ ✧ ✩ ✰ ⋆ ⟡</code>). Una estrella sólida como <code>★</code> produce una apariencia diferente a un destello ligero como <code>✧</code>. Prueba ambos estilos alrededor de tu texto antes de decidir.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-white">Flechas</h3>
-              <p>
-                Las flechas sirven tanto como decoración como para indicar dirección (ej. <code>→ ← ↑ ↓ ↗ ↘ ➜ ➤</code>). También pueden funcionar como separadores de perfil (<em>Nombre → Perfil</em>) o dentro de una línea descriptiva (<code>✦ Inicio → Ideas → Final ✦</code>).
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-white">Flores</h3>
-              <p>
-                Para una apariencia suave o decorativa puedes explorar <code>✿ ❀ ❁ ✾ ❃ ⚘</code>. Por ejemplo, <code>✿ Luna ✿</code> o <code>❀ Sofía ♡</code>. No necesitas utilizar muchas flores al mismo tiempo; una decoración pequeña suele ser mucho más fácil de leer.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-white">Lunas y cielo</h3>
-              <p>
-                Los símbolos relacionados con luna, sol y cielo combinan a la perfección con estilos nocturnos, minimalistas o aesthetic (ej. <code>☾ ☽ ☼ ☀ ☁</code>). Prueba opciones como <code>☾ Luna ☽</code> o <code>✦ ☾ Nova ☽ ✦</code>.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-white">Coronas</h3>
-              <p>
-                Entre los símbolos con apariencia real o heráldica puedes encontrar piezas de ajedrez y coronas como <code>♔ ♕ ♚ ♛ ⚜</code>. Por ejemplo: <code>♛ Alex ♛</code>. Una corona también puede combinarse con un marco, aunque conviene evitar añadir tantos elementos que el nombre resulte difícil de reconocer.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-white">Marcos y separadores</h3>
-              <p>
-                Los marcos permiten colocar un nombre o una palabra entre dos caracteres destacados: <code>『Luna』</code>, <code>【Nova】</code> o <code>꧁Alex꧂</code>. Por su parte, los separadores (<code>• ─ ━ │ ┊</code>) ayudan a estructurar información en líneas de biografía: <em>Luna ✦ Música ✦ Viajes</em>.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-white">Símbolos para gaming</h3>
-              <p>
-                Los jugadores suelen buscar caracteres que puedan colocar alrededor de un nick o utilizar como detalle visual (<code>亗 ⚔ ☠ ⌖ ☣</code>). En lugar de elegir una decoración solamente porque parece compleja, comprueba primero tres cosas: que puedas leer el nombre, que el juego acepte los caracteres y que el resultado siga viéndose correctamente después de pegarlo.
-              </p>
-              <p className="text-xs text-slate-400">
-                Si tu objetivo es específicamente Free Fire, te sugerimos revisar nuestra colección especializada de <Link href="/nombres-para-free-fire/simbolos/" className="text-cyan-400 hover:underline">símbolos para Free Fire</Link>.
-              </p>
-            </div>
-          </div>
-
-          {/* Section 4: How to use */}
-          <div className="border-b border-slate-800/80 pb-8 space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Cómo usar el selector de símbolos
-            </h2>
-            <ol className="list-decimal pl-5 space-y-2 text-slate-300">
-              <li><strong>Busca o elige una categoría:</strong> Escribe una palabra como <em>corazón</em>, <em>estrella</em>, <em>flor</em>, <em>flecha</em> o <em>corona</em>, o pulsa en las categorías disponibles.</li>
-              <li><strong>Copia el símbolo:</strong> Cuando solo necesites un carácter individual, pulsa <strong>Copiar</strong>. El navegador lo transferirá inmediatamente a tu portapapeles.</li>
-              <li><strong>Añádelo a una combinación:</strong> Si quieres utilizar varios caracteres juntos, pulsa <strong>+ Añadir</strong>. Puedes añadir <code>✦</code>, luego <code>♡</code> y finalmente <code>☾</code> para formar <code>✦ ♡ ☾</code>.</li>
-              <li><strong>Añade texto si lo necesitas:</strong> Escribe tu nombre o apodo en el campo de vista previa para ver cómo se integra con los símbolos (ej. <em>Sofía</em> → <code>✦ ♡ Sofía ☾</code>).</li>
-              <li><strong>Copia el resultado completo:</strong> Pulsa <strong>Copiar todo</strong> para llevarte la composición terminada sin tener que ir y venir de una aplicación a otra.</li>
-            </ol>
-          </div>
-
-          {/* Section 5: Combination Builder */}
-          <div className="border-b border-slate-800/80 pb-8 space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Crea tu propia combinación de símbolos
-            </h2>
-            <p>
-              Una colección sirve para descubrir caracteres; un constructor sirve para convertir esos caracteres en algo útil. Imagina que encuentras <code>✦</code>, <code>☾</code> y <code>♡</code>. En lugar de copiarlos por separado, agrégalos a <strong>Mi combinación</strong>.
-            </p>
-            <p>
-              Si introduces el nombre <em>Luna</em>, puedes probar al vuelo: <code>✦ Luna ☾</code>, <code>♡ Luna ♡</code>, <code>☾ ✦ Luna ✦ ☽</code> o <code>『Luna』</code>. El mejor resultado no siempre es el que tiene más adornos: si el texto es importante, procura que se mantenga perfectamente legible.
-            </p>
-          </div>
-
-          {/* Section 6: Decoration Ideas */}
-          <div className="border-b border-slate-800/80 pb-8 space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Ideas para decorar nombres y texto
-            </h2>
-            <ul className="list-disc pl-5 space-y-2 text-slate-300">
-              <li><strong>Enmarcar un nombre:</strong> Usa dos caracteres alrededor del texto (<code>『Carlos』</code>, <code>♡ Ana ♡</code>, <code>✦ Nova ✦</code>).</li>
-              <li><strong>Crear un separador de intereses:</strong> Utiliza un carácter entre palabras (<em>Música ✦ Viajes ✦ Café</em> o <em>Gaming • Clips • Directos</em>).</li>
-              <li><strong>Destacar una palabra o estado:</strong> Aplica una decoración ligera (<code>✧ Nuevo ✧</code>, <code>★ Favorito ★</code>).</li>
-              <li><strong>Crear secuencias decorativas:</strong> Prueba patrones puros como <code>✦ ♡ ☾ ♡ ✦</code> o <code>❀ ✧ ❀</code>.</li>
-            </ul>
-          </div>
-
-          {/* Section 7: Symbols vs Special Chars vs Emoji */}
-          <div className="border-b border-slate-800/80 pb-8 space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Símbolos, caracteres especiales y emoji: cuál es la diferencia
-            </h2>
-            <p>
-              En Internet estas palabras se mezclan con frecuencia, pero no siempre significan técnicamente lo mismo:
-            </p>
-            <ul className="list-disc pl-5 space-y-2 text-slate-300">
-              <li><strong>Carácter:</strong> Es una unidad de texto representada dentro de un sistema de codificación. Unicode asigna códigos únicos a una enorme variedad de letras, signos y símbolos internacionales.</li>
-              <li><strong>Símbolo de texto:</strong> Caracteres tipográficos como <code>★</code>, <code>♡</code>, <code>→</code> o <code>♛</code> que se comportan como texto estándar.</li>
-              <li><strong>Emoji:</strong> Elementos pensados para una representación pictográfica colorida. Algunos caracteres admiten tanto presentación de texto como presentación de emoji según el sistema o los selectores de variación aplicados.</li>
-            </ul>
-            <p>
-              Para la mayoría de los usuarios la diferencia práctica es clara: en esta biblioteca puedes buscar caracteres que se pueden seleccionar, copiar y pegar como texto plano en casi cualquier aplicación.
-            </p>
-          </div>
-
-          {/* Section 8: Why symbols look different */}
-          <div className="border-b border-slate-800/80 pb-8 space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Por qué algunos símbolos se ven diferentes
-            </h2>
-            <p>
-              Copiar un carácter no significa copiar una imagen estática. El mismo carácter Unicode puede renderizarse con sutiles diferencias visuales según el sistema operativo (iOS, Android, Windows, macOS), la aplicación utilizada y el catálogo de fuentes tipográficas instaladas.
-            </p>
-            <p>
-              Esto explica por qué un corazón o una estrella puede verse ligeramente más estilizado en un teléfono móvil que en un ordenador de sobremesa. Por esta razón, LetrasBonitas no promete que cada símbolo se verá exactamente igual en todos los dispositivos: la mejor prueba es copiar el símbolo y comprobarlo directamente en la app donde quieras publicarlo.
-            </p>
-          </div>
-
-          {/* Section 9: Empty boxes troubleshooting */}
-          <div className="border-b border-slate-800/80 pb-8 space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Qué hacer si un símbolo no aparece correctamente
-            </h2>
-            <p>
-              Si al pegar un símbolo ves un recuadro vacío (missing glyph), un signo de interrogación o un carácter extraño, suele deberse a que la aplicación de destino no soporta ese carácter específico. Aplica estas soluciones:
-            </p>
-            <ol className="list-decimal pl-5 space-y-1.5 text-slate-300">
-              <li><strong>Usa una alternativa más común:</strong> Si un adorno exótico falla, prueba con una estrella o corazón estándar (<code>★</code>, <code>♡</code>).</li>
-              <li><strong>Conserva siempre una versión sin decoración:</strong> Si preparas un nombre importante, ten a mano una versión en texto plano.</li>
-              <li><strong>Prueba directamente en el campo final:</strong> El comportamiento puede diferir entre el navegador web y el cliente de un juego o red social.</li>
-              <li><strong>Reduce la combinación:</strong> Prueba los caracteres uno por uno para detectar cuál de ellos causa el conflicto.</li>
-            </ol>
-          </div>
-
-          {/* Section 10: Readability */}
-          <div className="border-b border-slate-800/80 pb-8 space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Usa símbolos sin perder legibilidad
-            </h2>
-            <p>
-              Más decoración no significa automáticamente un resultado superior. Compara <code>✦ Luna ✦</code> con una combinación saturada de diez signos alrededor de la misma palabra: la primera deja absolutamente claro el nombre, mientras que la segunda entorpece la lectura.
-            </p>
-            <p>
-              Una regla práctica es comenzar con una estructura simétrica o minimalista (<em>Minimalista:</em> <code>✦ Luna</code>; <em>Simétrico:</em> <code>✦ Luna ✦</code>; <em>Enmarcado:</em> <code>『Luna』</code>) y agregar elementos complementarios solo si aportan valor estético real.
-            </p>
-          </div>
-
-          {/* Section 11: FAQs */}
-          <div className="border-b border-slate-800/80 pb-8 space-y-6">
-            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Preguntas frecuentes sobre símbolos
-            </h2>
-
-            <div className="space-y-4">
-              <div className="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
-                <h3 className="font-bold text-white text-base mb-1">¿Cómo puedo copiar un símbolo?</h3>
-                <p className="text-slate-300 text-sm">
-                  Busca el carácter que quieras y pulsa <strong>Copiar</strong>. Después abre la aplicación donde quieras utilizarlo y pega el contenido del portapapeles.
-                </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 my-2">
+            {[
+              { step: '01', icon: '🔍', title: 'Busca o elige', desc: 'Escribe una palabra en el buscador (ej. estrella, fuego, flor) o pulsa en una de las categorías.' },
+              { step: '02', icon: '📋', title: 'Copia con 1 clic', desc: 'Toca cualquier tarjeta. El símbolo se copiará de inmediato a tu portapapeles y se añadirá al campo superior.' },
+              { step: '03', icon: '✏️', title: 'Personaliza tu texto', desc: 'Escribe tu nombre o apodo en el campo de texto para ver cómo luce rodeado de los símbolos elegidos.' },
+              { step: '04', icon: '✨', title: 'Copia el conjunto', desc: 'Pulsa Copiar Todo para llevarte la frase completa con todos sus adornos lista para pegar.' },
+              { step: '05', icon: '🚀', title: 'Pega donde quieras', desc: 'Abre Instagram, WhatsApp, TikTok, tu juego favorito o Word y pega el texto directamente.' },
+            ].map(item => (
+              <div key={item.step} className="p-4 rounded-xl bg-slate-50 border border-slate-200 relative overflow-hidden">
+                <span className="absolute top-2 right-3 text-3xl font-black text-slate-200/80">{item.step}</span>
+                <span className="text-2xl block mb-1">{item.icon}</span>
+                <h3 className="text-sm font-bold text-slate-900 m-0 mb-1">{item.title}</h3>
+                <p className="text-xs text-slate-600 m-0">{item.desc}</p>
               </div>
-
-              <div className="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
-                <h3 className="font-bold text-white text-base mb-1">¿Puedo combinar varios símbolos?</h3>
-                <p className="text-slate-300 text-sm">
-                  Sí. Utiliza <strong>+ Añadir</strong> para enviar cada carácter a <em>Mi combinación</em>. Allí puedes construir una secuencia completa y copiarla con un solo clic.
-                </p>
-              </div>
-
-              <div className="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
-                <h3 className="font-bold text-white text-base mb-1">¿Puedo poner mi nombre entre símbolos?</h3>
-                <p className="text-slate-300 text-sm">
-                  Sí. Escribe tu nombre en el campo de texto de vista previa y combina los caracteres que quieras alrededor. Por ejemplo, Luna puede convertirse en <code>✦ Luna ✦</code> o <code>『Luna』</code>.
-                </p>
-              </div>
-
-              <div className="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
-                <h3 className="font-bold text-white text-base mb-1">¿Los símbolos son imágenes?</h3>
-                <p className="text-slate-300 text-sm">
-                  No. Los elementos de esta biblioteca son caracteres tipográficos de texto de la norma Unicode, no archivos de imagen. Su representación gráfica depende del entorno y las fuentes disponibles.
-                </p>
-              </div>
-
-              <div className="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
-                <h3 className="font-bold text-white text-base mb-1">¿Los símbolos se ven iguales en todos los dispositivos?</h3>
-                <p className="text-slate-300 text-sm">
-                  No necesariamente. La apariencia exacta puede variar según las fuentes, el sistema operativo y el soporte tipográfico del dispositivo o aplicación.
-                </p>
-              </div>
-
-              <div className="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
-                <h3 className="font-bold text-white text-base mb-1">¿Por qué aparece un cuadro en lugar del símbolo?</h3>
-                <p className="text-slate-300 text-sm">
-                  Indica que el software de destino no dispone del glifo necesario para mostrar ese carácter. Prueba con un símbolo más convencional de la misma categoría.
-                </p>
-              </div>
-
-              <div className="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
-                <h3 className="font-bold text-white text-base mb-1">¿Todos los símbolos funcionan en nombres de usuario?</h3>
-                <p className="text-slate-300 text-sm">
-                  No se debe asumir. Cada red social y videojuego establece sus propias reglas de validación de caracteres permitidos. Comprueba el resultado directamente antes de registrar un nombre importante.
-                </p>
-              </div>
-
-              <div className="p-4 bg-slate-900/60 rounded-xl border border-slate-800">
-                <h3 className="font-bold text-white text-base mb-1">¿Dónde encuentro símbolos para Instagram o Free Fire?</h3>
-                <p className="text-slate-300 text-sm">
-                  Para fines específicos de biografías de Instagram te recomendamos visitar nuestra sección de <Link href="/letras-para-instagram/simbolos-para-instagram/" className="text-cyan-400 hover:underline">símbolos para Instagram</Link>, y para el juego Free Fire visita <Link href="/nombres-para-free-fire/simbolos/" className="text-cyan-400 hover:underline">símbolos para Free Fire</Link>.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
+        </section>
 
-          {/* Section 12: Conclusion */}
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight mb-4">
-              Encuentra, combina y copia
-            </h2>
-            <p>
-              No necesitas recorrer listas interminables cada vez que busques un corazón, una estrella o una flecha. Utiliza el buscador o las categorías para llegar al símbolo exacto que necesitas y pulsa <strong>Copiar</strong>.
-            </p>
-            <p className="mt-3">
-              Cuando quieras un resultado más elaborado, usa <strong>+ Añadir</strong> para armar tu propia combinación y pruébala con tu texto antes de copiarla. Si más tarde quieres estilizar las letras de tu texto, puedes pasarlo por nuestro <Link href="/conversor-de-letras/" className="text-cyan-400 hover:underline">conversor de letras</Link> sin perder nunca la versión sencilla como respaldo.
-            </p>
+        {/* Section 5: Ideas for names */}
+        <section className="prose-card">
+          <h2>Ideas para Decorar Nombres y Biografías</h2>
+          <p>
+            No hace falta saturar el texto para lograr una apariencia atractiva. Aquí tienes algunas estructuras recomendadas:
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
+            {[
+              { title: 'Enmarcado simétrico', desc: 'Coloca el mismo símbolo a ambos lados', examples: '『Carlos』 · ♡ Ana ♡ · ✦ Nova ✦' },
+              { title: 'Separador de palabras', desc: 'Separa tus gustos o aficiones en la bio', examples: 'Música ✦ Viajes ✦ Fotografía ✦ Café' },
+              { title: 'Destello sutil', desc: 'Un detalle ligero al principio o al final', examples: '✧ Novedad · ★ Mi Perfil · 🌸 Hola a todos' },
+              { title: 'Patrones estéticos', desc: 'Secuencias decorativas para separar párrafos', examples: '✦ ♡ ☾ ♡ ✦ · ─── ⋆⋅☆⋅⋆ ───' },
+            ].map(idea => (
+              <div key={idea.title} className="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <h3 className="text-sm font-bold text-slate-900 m-0 mb-1">{idea.title}</h3>
+                <p className="text-xs text-slate-500 m-0 mb-2">{idea.desc}</p>
+                <p className="text-sm font-bold text-indigo-700 font-mono m-0 bg-white p-2 rounded-lg border border-slate-200">{idea.examples}</p>
+              </div>
+            ))}
           </div>
-        </article>
-      </div>
-    </div>
+        </section>
+
+        {/* Section 6: Symbols vs Chars vs Emojis */}
+        <section className="prose-card">
+          <h2>Diferencia entre Símbolos, Caracteres y Emojis</h2>
+          <p>
+            Aunque en el lenguaje cotidiano a menudo se utilizan como sinónimos, existen diferencias técnicas útiles de entender:
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-2">
+            {[
+              { title: 'Carácter', icon: 'Aa', desc: 'La unidad básica de texto en la codificación Unicode. Abarca letras del alfabeto latino, signos de puntuación y glifos internacionales.' },
+              { title: 'Símbolo de Texto', icon: '★', desc: 'Caracteres tipográficos como ★, ♡, → o ♛. Se comportan exactamente como texto plano y adoptan el color y tamaño de la fuente donde los pegues.' },
+              { title: 'Emoji', icon: '🎨', desc: 'Ideogramas pictográficos a color (🍕, 😊, ⚽). Su diseño visual depende del fabricante de tu teléfono o sistema operativo (Apple, Google, Microsoft).' },
+            ].map(item => (
+              <div key={item.title} className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                <span className="text-2xl block mb-1">{item.icon}</span>
+                <h3 className="text-sm font-bold text-slate-900 m-0 mb-1">{item.title}</h3>
+                <p className="text-xs text-slate-600 m-0 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section 7: FAQs */}
+        <section className="prose-card">
+          <h2>Preguntas Frecuentes sobre Símbolos</h2>
+
+          <div className="space-y-3 my-2">
+            {[
+              { q: '¿Cómo puedo copiar un símbolo?', a: 'Haz clic en cualquier tarjeta de símbolo y se copiará automáticamente al portapapeles. Después ve a tu red social o aplicación y dale a Pegar.' },
+              { q: '¿Puedo armar una combinación con mi nombre?', a: 'Sí. Escribe tu nombre en el campo superior y pulsa los símbolos que quieras agregar alrededor. Al terminar, presiona Copiar Todo.' },
+              { q: '¿Los símbolos funcionan en Instagram y TikTok?', a: 'Sí. La gran mayoría de estos símbolos son caracteres Unicode estándar aceptados en la biografía, el nombre y los comentarios de Instagram, TikTok, WhatsApp y Facebook.' },
+              { q: '¿Por qué algunos símbolos se ven como cuadros vacíos?', a: 'Si ves un cuadro vacío o un signo de interrogación, significa que la aplicación o dispositivo no cuenta con esa fuente específica instalada. Te recomendamos elegir un símbolo más popular como ★, ♡ o ✦.' },
+              { q: '¿Es necesario descargar o instalar alguna fuente?', a: 'No. Todos los caracteres funcionan directamente desde el navegador sin descargar nada ni instalar aplicaciones.' },
+            ].map((faq, idx) => (
+              <div key={idx} className="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <h3 className="font-bold text-slate-900 text-sm m-0 mb-1 flex items-center gap-2">
+                  <span className="w-5 h-5 rounded-md bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs font-black shrink-0">?</span>
+                  {faq.q}
+                </h3>
+                <p className="text-slate-600 text-xs pl-7 m-0">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section 8: Final Call to Action */}
+        <section className="prose-card">
+          <h2>Explora, Copia y Personaliza</h2>
+          <p>
+            No pierdas tiempo buscando caracteres en menús ocultos de tu teclado. Usa nuestra biblioteca interactiva para encontrar símbolos aesthetic, emojis, flechas y corazones en segundos.
+          </p>
+          <p>
+            Si además quieres cambiar la tipografía de tus palabras a letras cursivas, negritas o góticas, puedes probar nuestro <Link href="/conversor-de-letras/" className="text-indigo-600 hover:underline font-semibold">conversor de letras</Link> para combinar fuentes bonitas con tus símbolos favoritos.
+          </p>
+        </section>
+      </article>
+    </main>
   );
 }

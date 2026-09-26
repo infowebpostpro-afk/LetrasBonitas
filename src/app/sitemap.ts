@@ -29,6 +29,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/nombres-para-juegos/nombres-para-clanes/",
     "/nombres-para-juegos/nombres-chidos/",
     "/simbolos/",
+    "/simbolos/aesthetic/",
+    "/simbolos/bonitos/",
+    "/simbolos/especiales/",
     "/sobre-nosotros/",
     "/como-funcionan-nuestras-herramientas/",
     "/contacto/",
@@ -67,6 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       route.startsWith("/conversor-de-letras/") ||
       route.startsWith("/letras-cursivas/") ||
       route.startsWith("/letras-para-instagram/") ||
+      route.startsWith("/simbolos/") ||
       route.startsWith("/nombres-para-free-fire/") ||
       route.startsWith("/nombres-para-juegos/")
     ) {
