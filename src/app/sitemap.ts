@@ -32,6 +32,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/simbolos/aesthetic/",
     "/simbolos/bonitos/",
     "/simbolos/especiales/",
+    "/emojis/",
+    "/emojis/aesthetic/",
+    "/emojis/bonitos/",
     "/sobre-nosotros/",
     "/como-funcionan-nuestras-herramientas/",
     "/contacto/",
@@ -62,7 +65,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       route === "/nombres-para-juegos/nicks/" ||
       route === "/nombres-para-juegos/nombres-para-clanes/" ||
       route === "/nombres-para-juegos/nombres-chidos/" ||
-      route === "/simbolos/"
+      route === "/simbolos/" ||
+      route === "/emojis/"
     ) {
       priority = 0.9;
       changeFrequency = "weekly";
@@ -71,6 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       route.startsWith("/letras-cursivas/") ||
       route.startsWith("/letras-para-instagram/") ||
       route.startsWith("/simbolos/") ||
+      route.startsWith("/emojis/") ||
       route.startsWith("/nombres-para-free-fire/") ||
       route.startsWith("/nombres-para-juegos/")
     ) {

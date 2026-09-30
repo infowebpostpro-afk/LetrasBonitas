@@ -118,6 +118,12 @@ export function Header() {
           >
             Símbolos
           </Link>
+          <Link
+            href="/emojis/"
+            className={`site-header__nav-link ${isActiveRoute(pathname, "/emojis/") ? "is-active" : ""}`}
+          >
+            Emojis
+          </Link>
 
           {SILO_NAVIGATION.map((silo) => {
             const isGroupActive = isSiloActive(pathname, silo.href);
@@ -219,6 +225,13 @@ export function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               ✦ Símbolos
+            </Link>
+            <Link
+              href="/emojis/"
+              className={`site-header__mobile-link ${isActiveRoute(pathname, "/emojis/") ? "is-active" : ""}`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              😀 Emojis
             </Link>
 
             <hr className="site-header__mobile-divider" />
@@ -324,6 +337,14 @@ export function Footer() {
                   className={isActiveRoute(pathname, "/simbolos/") ? "is-active" : ""}
                 >
                   Símbolos
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/emojis/"
+                  className={isActiveRoute(pathname, "/emojis/") ? "is-active" : ""}
+                >
+                  Emojis
                 </Link>
               </li>
               {SILO_NAVIGATION.map((silo) => (
