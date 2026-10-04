@@ -1,28 +1,28 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ConversorDeLetrasTool } from "@/components/font-generator/ConversorDeLetrasTool";
 
 export const metadata: Metadata = {
-  title: "Conversor de Letras Online | Letras Bonitas para Copiar y Pegar",
+  title: "Conversor de Letras Bonitas Online y Gratis",
   description:
-    "Usa nuestro conversor de letras para crear texto bonito, cursivo, elegante y aesthetic. Escribe, elige un estilo y copia tus letras para redes sociales.",
+    "Convierte cualquier texto en letras bonitas al instante con nuestro conversor gratis. Más de 300 estilos para copiar y pegar donde quieras.",
   alternates: {
     canonical: "/conversor-de-letras/",
   },
   openGraph: {
-    title: "Conversor de Letras Online | Letras Bonitas para Copiar y Pegar",
+    title: "Conversor de Letras Bonitas Online y Gratis",
     description:
-      "Usa nuestro conversor de letras para crear texto bonito, cursivo, elegante y aesthetic. Escribe, elige un estilo y copia tus letras para redes sociales.",
+      "Convierte cualquier texto en letras bonitas al instante con nuestro conversor gratis. Más de 300 estilos para copiar y pegar donde quieras.",
     locale: "es",
     type: "website",
     url: "/conversor-de-letras/",
   },
   twitter: {
     card: "summary",
-    title: "Conversor de Letras Online | Letras Bonitas para Copiar y Pegar",
+    title: "Conversor de Letras Bonitas Online y Gratis",
     description:
-      "Usa nuestro conversor de letras para crear texto bonito, cursivo, elegante y aesthetic. Escribe, elige un estilo y copia tus letras para redes sociales.",
+      "Convierte cualquier texto en letras bonitas al instante con nuestro conversor gratis. Más de 300 estilos para copiar y pegar donde quieras.",
   },
   robots: {
     index: true,
@@ -754,12 +754,15 @@ export default function ConversorDeLetrasPage() {
           </p>
           <p>Si buscas una categoría concreta, puedes continuar con:</p>
           <ul>
-            <li><Link href="/letras-cursivas/">Letras Cursivas</Link> para explorar estilos cursivos.</li>
+            <li><Link href="/letras-cursivas/">Letras Cursivas</Link> para explorar estilos cursivos y caligráficos.</li>
+            <li><Link href="/letras-goticas/">Letras Góticas</Link> para estilos de apariencia medieval y Fraktur oscura.</li>
+            <li><Link href="/letras-aesthetic/">Letras Aesthetic</Link> para estilos suaves, minimalistas y delicados.</li>
+            <li><Link href="/letras-burbuja/">Letras Burbuja</Link> para texto circular y números redondos divertidos.</li>
+            <li><Link href="/letras-negritas/">Letras Negritas</Link> para resaltar títulos y frases en negrita Unicode.</li>
             <li><Link href="/letras-para-instagram/">Letras para Instagram</Link> para descubrir opciones orientadas a Instagram.</li>
             <li><Link href="/simbolos/">Símbolos</Link> para encontrar caracteres decorativos y símbolos para copiar.</li>
             <li><Link href="/texto-invisible/">Texto Invisible</Link> para explorar caracteres invisibles y espacios especiales.</li>
             <li><Link href="/tipos-de-letras/">Tipos de Letras</Link> para descubrir diferentes estilos y formas de letras.</li>
-            <li><Link href="/letras-goticas/">Letras Góticas</Link> para estilos de apariencia blackletter.</li>
             <li><Link href="/letras-graffiti/">Letras Graffiti</Link> para estilos inspirados en lettering urbano.</li>
           </ul>
           <p className="highlight-box font-semibold text-center mt-2">

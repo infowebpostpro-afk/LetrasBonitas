@@ -4,25 +4,25 @@ import { HomeFontGenerator } from "@/components/font-generator/HomeFontGenerator
 import { fontStyles } from "@/lib/unicode";
 
 export const metadata: Metadata = {
-  title: "Letras Bonitas para Copiar y Pegar | LetrasBonitas",
+  title: "Letras Bonitas para Copiar y Pegar — 300+ Estilos Gratis",
   description:
-    "Genera letras bonitas para copiar y pegar. Escribe tu texto, prueba diferentes estilos y copia el resultado para usarlo donde quieras.",
+    "Generador de letras bonitas gratis: convierte tu texto en más de 300 estilos Unicode (cursivas, góticas, aesthetic) para copiar y pegar en Instagram, TikTok y WhatsApp.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Letras Bonitas para Copiar y Pegar | LetrasBonitas",
+    title: "Letras Bonitas para Copiar y Pegar — 300+ Estilos Gratis",
     description:
-      "Genera letras bonitas para copiar y pegar. Escribe tu texto, prueba diferentes estilos y copia el resultado para usarlo donde quieras.",
+      "Generador de letras bonitas gratis: convierte tu texto en más de 300 estilos Unicode (cursivas, góticas, aesthetic) para copiar y pegar en Instagram, TikTok y WhatsApp.",
     locale: "es",
     type: "website",
     url: "/",
   },
   twitter: {
     card: "summary",
-    title: "Letras Bonitas para Copiar y Pegar | LetrasBonitas",
+    title: "Letras Bonitas para Copiar y Pegar — 300+ Estilos Gratis",
     description:
-      "Genera letras bonitas para copiar y pegar. Escribe tu texto, prueba diferentes estilos y copia el resultado para usarlo donde quieras.",
+      "Generador de letras bonitas gratis: convierte tu texto en más de 300 estilos Unicode (cursivas, góticas, aesthetic) para copiar y pegar en Instagram, TikTok y WhatsApp.",
   },
   robots: {
     index: true,

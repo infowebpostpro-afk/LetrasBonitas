@@ -3,16 +3,16 @@ import Link from "next/link";
 import { FreeFireNameGenerator } from "@/components/font-generator/FreeFireNameGenerator";
 
 export const metadata: Metadata = {
-  title: "Nombres para Free Fire: Generador y Nicks para Copiar | LetrasBonitas",
+  title: "Nombres para Free Fire: Generador de Nicks Insanos",
   description:
-    "Crea nombres para Free Fire con nuestro generador. Personaliza tu nick, prueba diferentes estilos y símbolos y copia el resultado para usarlo en el juego.",
+    "Crea nombres para Free Fire con estilos únicos: insanos, elegantes y decorados. Copia y pega tu nick perfecto gratis.",
   alternates: {
     canonical: "https://letrasbonits.com/nombres-para-free-fire/",
   },
   openGraph: {
-    title: "Nombres para Free Fire: Generador y Nicks para Copiar | LetrasBonitas",
+    title: "Nombres para Free Fire: Generador de Nicks Insanos",
     description:
-      "Crea nombres para Free Fire con nuestro generador. Personaliza tu nick, prueba diferentes estilos y símbolos y copia el resultado para usarlo en el juego.",
+      "Crea nombres para Free Fire con estilos únicos: insanos, elegantes y decorados. Copia y pega tu nick perfecto gratis.",
     url: "https://letrasbonits.com/nombres-para-free-fire/",
     siteName: "LetrasBonitas",
     locale: "es_ES",
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nombres para Free Fire: Generador y Nicks para Copiar",
+    title: "Nombres para Free Fire: Generador de Nicks Insanos",
     description:
-      "Crea nombres para Free Fire con nuestro generador. Personaliza tu nick, prueba diferentes estilos y símbolos y copia el resultado.",
+      "Crea nombres para Free Fire con estilos únicos: insanos, elegantes y decorados. Copia y pega tu nick perfecto gratis.",
   },
 };
 

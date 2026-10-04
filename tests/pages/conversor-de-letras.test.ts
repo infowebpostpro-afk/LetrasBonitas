@@ -5,17 +5,17 @@ import { FONT_CATEGORIES, fontStyles, validateRegistry } from "@/lib/unicode";
 describe("Conversor de Letras Pillar Page", () => {
   it("defines accurate metadata title, description, and canonical URL", () => {
     expect(metadata.title).toBe(
-      "Conversor de Letras Online | Letras Bonitas para Copiar y Pegar"
+      "Conversor de Letras Bonitas Online y Gratis"
     );
     expect(metadata.description).toBe(
-      "Usa nuestro conversor de letras para crear texto bonito, cursivo, elegante y aesthetic. Escribe, elige un estilo y copia tus letras para redes sociales."
+      "Convierte cualquier texto en letras bonitas al instante con nuestro conversor gratis. Más de 300 estilos para copiar y pegar donde quieras."
     );
     expect(metadata.alternates?.canonical).toBe("/conversor-de-letras/");
   });
 
   it("defines OpenGraph and Twitter social metadata", () => {
     expect(metadata.openGraph?.title).toBe(
-      "Conversor de Letras Online | Letras Bonitas para Copiar y Pegar"
+      "Conversor de Letras Bonitas Online y Gratis"
     );
     expect(metadata.openGraph?.url).toBe("/conversor-de-letras/");
     expect(metadata.openGraph?.locale).toBe("es");

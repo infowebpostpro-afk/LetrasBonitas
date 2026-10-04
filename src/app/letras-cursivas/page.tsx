@@ -1,28 +1,28 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { CursiveFontGenerator } from "@/components/font-generator/CursiveFontGenerator";
 
 export const metadata: Metadata = {
-  title: "Letras Cursivas para Copiar y Pegar | Generador Gratis",
+  title: "Letras Cursivas para Copiar y Pegar — Generador Gratis",
   description:
-    "Genera letras cursivas bonitas y elegantes para copiar y pegar. Escribe tu texto, explora diferentes estilos y copia el resultado para usarlo en tus perfiles y mensajes.",
+    "Genera letras cursivas elegantes para copiar y pegar en Instagram, TikTok y WhatsApp. Gratis, sin registro y al instante.",
   alternates: {
     canonical: "/letras-cursivas/",
   },
   openGraph: {
-    title: "Letras Cursivas para Copiar y Pegar | Generador Gratis",
+    title: "Letras Cursivas para Copiar y Pegar — Generador Gratis",
     description:
-      "Genera letras cursivas bonitas y elegantes para copiar y pegar. Escribe tu texto, explora diferentes estilos y copia el resultado.",
+      "Genera letras cursivas elegantes para copiar y pegar en Instagram, TikTok y WhatsApp. Gratis, sin registro y al instante.",
     locale: "es",
     type: "website",
     url: "/letras-cursivas/",
   },
   twitter: {
     card: "summary",
-    title: "Letras Cursivas para Copiar y Pegar | Generador Gratis",
+    title: "Letras Cursivas para Copiar y Pegar — Generador Gratis",
     description:
-      "Genera letras cursivas bonitas y elegantes para copiar y pegar. Escribe tu texto, explora diferentes estilos y copia el resultado.",
+      "Genera letras cursivas elegantes para copiar y pegar en Instagram, TikTok y WhatsApp. Gratis, sin registro y al instante.",
   },
   robots: {
     index: true,

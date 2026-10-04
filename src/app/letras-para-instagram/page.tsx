@@ -4,25 +4,25 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { InstagramFontGenerator } from "@/components/font-generator/InstagramFontGenerator";
 
 export const metadata: Metadata = {
-  title: "Letras para Instagram: Fuentes Bonitas para Copiar y Pegar",
+  title: "Letras para Instagram: Bio, Nombres y Símbolos para Copiar",
   description:
-    "Crea letras para Instagram con estilos cursivos, elegantes, aesthetic, góticos y más. Escribe, elige tu estilo, copia y pega directamente.",
+    "Las mejores letras para Instagram: bios, nombres y símbolos listos para copiar y pegar. Dale un estilo único a tu perfil gratis.",
   alternates: {
     canonical: "/letras-para-instagram/",
   },
   openGraph: {
-    title: "Letras para Instagram: Fuentes Bonitas para Copiar y Pegar",
+    title: "Letras para Instagram: Bio, Nombres y Símbolos para Copiar",
     description:
-      "Crea letras para Instagram con estilos cursivos, elegantes, aesthetic, góticos y más. Escribe, elige tu estilo, copia y pega directamente.",
+      "Las mejores letras para Instagram: bios, nombres y símbolos listos para copiar y pegar. Dale un estilo único a tu perfil gratis.",
     locale: "es",
     type: "website",
     url: "/letras-para-instagram/",
   },
   twitter: {
     card: "summary",
-    title: "Letras para Instagram: Fuentes Bonitas para Copiar y Pegar",
+    title: "Letras para Instagram: Bio, Nombres y Símbolos para Copiar",
     description:
-      "Crea letras para Instagram con estilos cursivos, elegantes, aesthetic, góticos y más. Escribe, elige tu estilo, copia y pega directamente.",
+      "Las mejores letras para Instagram: bios, nombres y símbolos listos para copiar y pegar. Dale un estilo único a tu perfil gratis.",
   },
   robots: {
     index: true,
@@ -787,10 +787,14 @@ export default function LetrasParaInstagramPage() {
           <ul>
             <li><Link href="/conversor-de-letras/">Conversor de Letras</Link> para transformar texto en diferentes estilos.</li>
             <li><Link href="/letras-cursivas/">Letras Cursivas</Link> para explorar variantes cursivas.</li>
+            <li><Link href="/letras-para-tiktok/">Letras para TikTok</Link> para personalizar nombres y bios de TikTok.</li>
+            <li><Link href="/letras-para-whatsapp/">Letras para WhatsApp</Link> para estados, nombres de contacto y mensajes.</li>
+            <li><Link href="/letras-para-facebook/">Letras para Facebook</Link> para titulares de posts y comentarios destacados.</li>
+            <li><Link href="/letras-para-discord/">Letras para Discord</Link> para nicks de servidor y nombres de canales.</li>
             <li><Link href="/simbolos/">Símbolos</Link> para encontrar caracteres decorativos.</li>
             <li><Link href="/tipos-de-letras/">Tipos de Letras</Link> para descubrir diferentes estilos.</li>
             <li><Link href="/letras-goticas/">Letras Góticas</Link> para estilos góticos.</li>
-            <li><Link href="/letras-graffiti/">Letras Graffiti</Link> para estilos decorativos.</li>
+            <li><Link href="/letras-aesthetic/">Letras Aesthetic</Link> para fuentes suaves y minimalistas.</li>
             <li><Link href="/nombres-para-free-fire/">Nombres para Free Fire</Link> para nombres orientados al gaming.</li>
             <li><Link href="/letras-para-instagram/letras-para-bio/">Letras para Bio</Link> para diseñar biografías de Instagram.</li>
             <li><Link href="/letras-para-instagram/letras-para-nombres/">Letras para Nombres</Link> para personalizar tu nombre de usuario.</li>

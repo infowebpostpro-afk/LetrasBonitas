@@ -130,6 +130,12 @@ export default function BonitosEmojisPage() {
           </div>
           <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
             <Link
+              href="/emojis/para-copiar-y-pegar/"
+              className="text-xs px-3.5 py-2 rounded-lg font-semibold bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition-colors"
+            >
+              Copiar y Pegar
+            </Link>
+            <Link
               href="/emojis/"
               className="text-xs px-3.5 py-2 rounded-lg font-semibold bg-indigo-50 text-indigo-700 hover:bg-indigo-100 transition-colors"
             >

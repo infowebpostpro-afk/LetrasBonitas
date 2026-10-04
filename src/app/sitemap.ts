@@ -33,8 +33,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/simbolos/bonitos/",
     "/simbolos/especiales/",
     "/emojis/",
+    "/emojis/para-copiar-y-pegar/",
     "/emojis/aesthetic/",
     "/emojis/bonitos/",
+    "/letras-goticas/",
+    "/letras-aesthetic/",
+    "/letras-burbuja/",
+    "/letras-negritas/",
+    "/letras-para-tiktok/",
+    "/letras-para-whatsapp/",
+    "/letras-para-facebook/",
+    "/letras-para-discord/",
     "/sobre-nosotros/",
     "/como-funcionan-nuestras-herramientas/",
     "/contacto/",
@@ -66,7 +75,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       route === "/nombres-para-juegos/nombres-para-clanes/" ||
       route === "/nombres-para-juegos/nombres-chidos/" ||
       route === "/simbolos/" ||
-      route === "/emojis/"
+      route === "/emojis/" ||
+      route === "/letras-goticas/" ||
+      route === "/letras-aesthetic/" ||
+      route === "/letras-burbuja/" ||
+      route === "/letras-negritas/" ||
+      route === "/letras-para-tiktok/" ||
+      route === "/letras-para-whatsapp/" ||
+      route === "/letras-para-facebook/" ||
+      route === "/letras-para-discord/"
     ) {
       priority = 0.9;
       changeFrequency = "weekly";

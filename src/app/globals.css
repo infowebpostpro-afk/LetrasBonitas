@@ -366,6 +366,995 @@ img {
   background: var(--gradient-saas-instagram);
 }
 
+.hero-saas--aesthetic {
+  background: linear-gradient(135deg, #181126 0%, #291B42 45%, #3B2144 80%, #20172B 100%);
+  border: 1px solid rgba(244, 114, 182, 0.15);
+}
+
+.hero-saas--aesthetic::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 25%, rgba(192, 132, 252, 0.28) 0%, transparent 50%),
+    radial-gradient(circle at 80% 30%, rgba(244, 114, 182, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 50% 85%, rgba(147, 197, 253, 0.18) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.hero-saas__badge--aesthetic {
+  color: #F472B6;
+  background: rgba(244, 114, 182, 0.12);
+  border-color: rgba(244, 114, 182, 0.3);
+}
+
+.gradient-text-aesthetic {
+  background: linear-gradient(135deg, #F472B6 0%, #C084FC 50%, #93C5FD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-aesthetic-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1.5rem auto 1rem;
+  max-width: 680px;
+}
+
+.hero-aesthetic-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(244, 114, 182, 0.22);
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  color: #F8FAFC;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.hero-aesthetic-pill:hover {
+  transform: translateY(-2px);
+  border-color: rgba(244, 114, 182, 0.5);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.hero-aesthetic-pill__label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #CBD5E1;
+  font-weight: 600;
+}
+
+.hero-aesthetic-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #E2E8F0;
+  margin-top: 0.75rem;
+  opacity: 0.92;
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-aesthetic-pill {
+    transition: none;
+  }
+  .hero-aesthetic-pill:hover {
+    transform: none;
+  }
+}
+
+.hero-saas--burbuja {
+  background: linear-gradient(135deg, #091528 0%, #0F2E4D 45%, #0B4657 80%, #071E3D 100%);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.hero-saas--burbuja::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 25%, rgba(56, 189, 248, 0.25) 0%, transparent 45%),
+    radial-gradient(circle at 82% 35%, rgba(52, 211, 153, 0.2) 0%, transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(167, 139, 250, 0.18) 0%, transparent 55%),
+    radial-gradient(circle at 75% 75%, rgba(56, 189, 248, 0.15) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.hero-saas__badge--burbuja {
+  color: #38BDF8;
+  background: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.gradient-text-bubble {
+  background: linear-gradient(135deg, #38BDF8 0%, #34D399 50%, #A78BFA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-bubble-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1.5rem auto 1rem;
+  max-width: 720px;
+}
+
+.hero-bubble-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.9rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius-full);
+  font-size: 0.98rem;
+  color: #F8FAFC;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-bubble-pill:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.55);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.2);
+}
+
+.hero-bubble-pill__label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94A3B8;
+  font-weight: 600;
+}
+
+.hero-bubble-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #E2E8F0;
+  margin-top: 0.75rem;
+  opacity: 0.92;
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bubble-pill {
+    transition: none;
+  }
+  .hero-bubble-pill:hover {
+    transform: none;
+  }
+}
+
+.hero-saas--negritas {
+  background: linear-gradient(135deg, #090D16 0%, #111827 50%, #1E293B 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.hero-saas--negritas::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(245, 158, 11, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(99, 102, 241, 0.22) 0%, transparent 50%),
+    radial-gradient(circle at 50% 85%, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-saas__badge--bold {
+  color: #FBBF24;
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.35);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.gradient-text-amber {
+  background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #F97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-bold-transform-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 1.5rem auto 1.25rem;
+  max-width: 660px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-xl);
+  padding: 1rem 1.5rem;
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.35);
+}
+
+.hero-bold-transform-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.hero-bold-transform-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94A3B8;
+  font-weight: 700;
+}
+
+.hero-bold-transform-val {
+  font-size: 1.25rem;
+  color: #CBD5E1;
+  font-weight: 500;
+}
+
+.hero-bold-transform-val--bold {
+  font-size: 1.35rem;
+  color: #FFFFFF;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-bold-transform-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  color: #F59E0B;
+  font-weight: 800;
+  user-select: none;
+}
+
+.hero-bold-transform-arrow span:first-child {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.hero-bold-transform-arrow__badge {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(245, 158, 11, 0.15);
+  color: #FBBF24;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-full);
+}
+
+.hero-bold-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0 auto 0.75rem;
+  max-width: 680px;
+}
+
+.hero-bold-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.hero-bold-pill:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 158, 11, 0.5);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hero-bold-pill__label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94A3B8;
+  font-weight: 700;
+}
+
+.hero-bold-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #E2E8F0;
+  margin-top: 0.75rem;
+  opacity: 0.92;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .hero-bold-transform-box {
+    flex-direction: column;
+    gap: 0.65rem;
+    padding: 0.85rem 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bold-pill {
+    transition: none;
+  }
+  .hero-bold-pill:hover {
+    transform: none;
+  }
+}
+
+/* TikTok Creator Identity Hero */
+.hero-saas--tiktok {
+  background: linear-gradient(135deg, #050508 0%, #0d0e15 50%, #15121e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-saas--tiktok::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(37, 244, 238, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 82% 35%, rgba(254, 44, 85, 0.16) 0%, transparent 48%),
+    radial-gradient(circle at 50% 90%, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-saas__badge--tiktok {
+  color: #25F4EE;
+  background: rgba(37, 244, 238, 0.1);
+  border-color: rgba(37, 244, 238, 0.35);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.gradient-text-tiktok {
+  background: linear-gradient(135deg, #25F4EE 0%, #FFFFFF 45%, #FE2C55 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.creator-preview-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem auto 1rem;
+  max-width: 440px;
+  background: rgba(18, 18, 26, 0.85);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-2xl);
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(37, 244, 238, 0.12);
+  text-align: center;
+}
+
+.creator-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.creator-preview-tag {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: #25F4EE;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.creator-preview-status {
+  font-size: 0.7rem;
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.creator-preview-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(37, 244, 238, 0.25) 0%, rgba(254, 44, 85, 0.25) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 0.6rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.creator-preview-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 0.2rem;
+  letter-spacing: 0.02em;
+}
+
+.creator-preview-handle {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  font-weight: 500;
+  margin: 0 0 0.65rem;
+  font-family: ui-monospace, monospace;
+}
+
+.creator-preview-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.4rem 0 0.8rem;
+  padding: 0.4rem 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-md);
+  width: 100%;
+}
+
+.creator-preview-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.creator-preview-stat-num {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #F1F5F9;
+}
+
+.creator-preview-stat-label {
+  font-size: 0.68rem;
+  color: #94A3B8;
+}
+
+.creator-preview-bio {
+  font-size: 0.92rem;
+  color: #E2E8F0;
+  margin: 0.25rem 0 0.75rem;
+  line-height: 1.4;
+}
+
+.creator-preview-notice {
+  font-size: 0.7rem;
+  color: #94A3B8;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  display: block;
+  width: 100%;
+}
+
+.hero-tiktok-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem auto 0.75rem;
+  max-width: 650px;
+}
+
+.hero-tiktok-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  color: #F8FAFC;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.hero-tiktok-pill:hover {
+  transform: translateY(-2px);
+  border-color: rgba(37, 244, 238, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-tiktok-pill__type {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #25F4EE;
+  font-weight: 700;
+}
+
+.hero-tiktok-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #E2E8F0;
+  margin-top: 0.75rem;
+  opacity: 0.92;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .creator-preview-card {
+    padding: 1rem 1.15rem;
+    margin: 1.25rem 0.5rem 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-tiktok-pill {
+    transition: none;
+  }
+  .hero-tiktok-pill:hover {
+    transform: none;
+  }
+}
+
+/* WhatsApp Messaging & Status Hero */
+.hero-saas--whatsapp {
+  background: linear-gradient(135deg, #06110D 0%, #0B1914 50%, #11221C 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-saas--whatsapp::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 25%, rgba(16, 185, 129, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 82% 35%, rgba(52, 211, 153, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 50% 85%, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-saas__badge--whatsapp {
+  color: #34D399;
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.35);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.gradient-text-emerald {
+  background: linear-gradient(135deg, #6EE7B7 0%, #34D399 45%, #A7F3D0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.chat-preview-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 1.5rem auto 1rem;
+  max-width: 460px;
+  background: rgba(12, 22, 18, 0.88);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-2xl);
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(16, 185, 129, 0.15);
+  text-align: left;
+}
+
+.chat-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chat-preview-user {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.chat-preview-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.chat-preview-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-preview-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #F1F5F9;
+  line-height: 1.2;
+}
+
+.chat-preview-status-line {
+  font-size: 0.72rem;
+  color: #34D399;
+}
+
+.chat-preview-badge-status {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: #94A3B8;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+.chat-bubble {
+  max-width: 82%;
+  padding: 0.55rem 0.85rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  position: relative;
+  word-break: break-word;
+}
+
+.chat-bubble--in {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.08);
+  color: #E2E8F0;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-bubble--out {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #065F46 0%, #047857 100%);
+  color: #FFFFFF;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 4px 12px rgba(6, 95, 70, 0.35);
+}
+
+.chat-bubble--status {
+  align-self: center;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px dashed rgba(52, 211, 153, 0.35);
+  color: #E2E8F0;
+  font-size: 0.82rem;
+  text-align: center;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  margin-top: 0.25rem;
+}
+
+.chat-bubble-time {
+  display: block;
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: right;
+  margin-top: 0.2rem;
+  font-family: ui-monospace, monospace;
+}
+
+.hero-whatsapp-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem auto 0.75rem;
+  max-width: 650px;
+}
+
+.hero-whatsapp-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  color: #F8FAFC;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.hero-whatsapp-pill:hover {
+  transform: translateY(-2px);
+  border-color: rgba(52, 211, 153, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-whatsapp-pill__type {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #34D399;
+  font-weight: 700;
+}
+
+.hero-whatsapp-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #E2E8F0;
+  margin-top: 0.75rem;
+  opacity: 0.92;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .chat-preview-card {
+    padding: 1rem 1.15rem;
+    margin: 1.25rem 0.5rem 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-whatsapp-pill {
+    transition: none;
+  }
+  .hero-whatsapp-pill:hover {
+    transform: none;
+  }
+}
+
+/* Facebook Social Feed & Publication Hero */
+.hero-saas--facebook {
+  background: linear-gradient(135deg, #070B14 0%, #0C1322 50%, #111B30 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-saas--facebook::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 25%, rgba(59, 130, 246, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 82% 35%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 50% 85%, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-saas__badge--facebook {
+  color: #60A5FA;
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.35);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, #93C5FD 0%, #60A5FA 45%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.feed-preview-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem auto 1rem;
+  max-width: 470px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-2xl);
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(59, 130, 246, 0.15);
+  text-align: left;
+}
+
+.feed-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feed-preview-user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.feed-preview-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.feed-preview-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.feed-preview-author {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  line-height: 1.2;
+}
+
+.feed-preview-time {
+  font-size: 0.72rem;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.feed-preview-badge-live {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: #60A5FA;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+.feed-preview-body {
+  padding: 0.4rem 0 0.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.feed-preview-headline {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.35rem;
+  line-height: 1.35;
+}
+
+.feed-preview-subtext {
+  font-size: 0.92rem;
+  color: #E2E8F0;
+  line-height: 1.45;
+}
+
+.feed-preview-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: #94A3B8;
+  padding-top: 0.15rem;
+}
+
+.feed-preview-reactions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.feed-preview-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero-facebook-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem auto 0.75rem;
+  max-width: 650px;
+}
+
+.hero-facebook-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  color: #F8FAFC;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.hero-facebook-pill:hover {
+  transform: translateY(-2px);
+  border-color: rgba(96, 165, 250, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-facebook-pill__type {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #60A5FA;
+  font-weight: 700;
+}
+
+.hero-facebook-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #E2E8F0;
+  margin-top: 0.75rem;
+  opacity: 0.92;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .feed-preview-card {
+    padding: 1rem 1.15rem;
+    margin: 1.25rem 0.5rem 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-facebook-pill {
+    transition: none;
+  }
+  .hero-facebook-pill:hover {
+    transform: none;
+  }
+}
+
 
 /* ════════════════════════════════════════════
    SITE HEADER

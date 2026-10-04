@@ -123,6 +123,12 @@ export default function EmojisPage() {
           </div>
           <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
             <Link
+              href="/emojis/para-copiar-y-pegar/"
+              className="text-xs px-3.5 py-2 rounded-lg font-semibold bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition-colors"
+            >
+              Copiar y Pegar
+            </Link>
+            <Link
               href="/emojis/bonitos/"
               className="text-xs px-3.5 py-2 rounded-lg font-semibold bg-pink-50 text-pink-700 hover:bg-pink-100 transition-colors"
             >

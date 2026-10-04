@@ -5,17 +5,17 @@ import { fontStyles } from "@/lib/unicode";
 describe("Letras para Instagram Page", () => {
   it("defines accurate metadata title, description, and canonical URL", () => {
     expect(metadata.title).toBe(
-      "Letras para Instagram: Fuentes Bonitas para Copiar y Pegar"
+      "Letras para Instagram: Bio, Nombres y Símbolos para Copiar"
     );
     expect(metadata.description).toBe(
-      "Crea letras para Instagram con estilos cursivos, elegantes, aesthetic, góticos y más. Escribe, elige tu estilo, copia y pega directamente."
+      "Las mejores letras para Instagram: bios, nombres y símbolos listos para copiar y pegar. Dale un estilo único a tu perfil gratis."
     );
     expect(metadata.alternates?.canonical).toBe("/letras-para-instagram/");
   });
 
   it("defines OpenGraph and Twitter social metadata", () => {
     expect(metadata.openGraph?.title).toBe(
-      "Letras para Instagram: Fuentes Bonitas para Copiar y Pegar"
+      "Letras para Instagram: Bio, Nombres y Símbolos para Copiar"
     );
     expect(metadata.openGraph?.url).toBe("/letras-para-instagram/");
     expect(metadata.openGraph?.locale).toBe("es");
