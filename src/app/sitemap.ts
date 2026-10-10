@@ -40,10 +40,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/letras-aesthetic/",
     "/letras-burbuja/",
     "/letras-negritas/",
+    "/letras-graffiti/",
     "/letras-para-tiktok/",
     "/letras-para-whatsapp/",
     "/letras-para-facebook/",
     "/letras-para-discord/",
+    "/texto-invisible/",
+    "/texto-invisible/espacio-en-blanco/",
+    "/texto-invisible/caracter-invisible/",
     "/sobre-nosotros/",
     "/como-funcionan-nuestras-herramientas/",
     "/contacto/",
@@ -83,7 +87,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       route === "/letras-para-tiktok/" ||
       route === "/letras-para-whatsapp/" ||
       route === "/letras-para-facebook/" ||
-      route === "/letras-para-discord/"
+      route === "/letras-para-discord/" ||
+      route === "/texto-invisible/"
     ) {
       priority = 0.9;
       changeFrequency = "weekly";

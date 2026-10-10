@@ -4,6 +4,12 @@ const nextConfig = {
   trailingSlash: true,
   compress: true,
   poweredByHeader: false,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production" ? { exclude: ["error", "warn"] } : false,
+  },
+  experimental: {
+    optimizePackageImports: ["@/lib/unicode", "@/lib/navigationData"],
+  },
   allowedDevOrigins: ['192.168.1.6', '192.168.1.6:3000', 'localhost:3000'],
   async redirects() {
     return [

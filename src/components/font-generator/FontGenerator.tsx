@@ -10,8 +10,8 @@ import { FontSearch } from "./FontSearch";
 import { FontFilters } from "./FontFilters";
 import { FontResults } from "./FontResults";
 
-const INITIAL_VISIBLE = 48;
-const LOAD_MORE_STEP = 48;
+const INITIAL_VISIBLE = 24;
+const LOAD_MORE_STEP = 24;
 
 export type GeneratorStyle = {
   id: string;

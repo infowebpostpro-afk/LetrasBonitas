@@ -686,6 +686,11 @@ export default function LetrasBurbujaPage() {
               <p>Colección de lunas, estrellas, corazones y destellos para complementar tus textos.</p>
               <Link href="/simbolos/aesthetic/" className="btn btn--secondary">Ver Símbolos</Link>
             </div>
+            <div className="family-card">
+              <h3>Letras Graffiti</h3>
+              <p>Estilos urbanos de graffiti, burbujas infladas y lettering callejero para copiar.</p>
+              <Link href="/letras-graffiti/" className="btn btn--secondary">Ver Graffiti</Link>
+            </div>
           </div>
         </section>
       </article>

@@ -2984,6 +2984,8 @@ img {
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   box-shadow: var(--shadow-xs);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 320px;
 }
 
 .prose-card h2 {
@@ -4350,6 +4352,8 @@ footer a {
   background: var(--color-surface-subtle, #f8fafc);
   border-top: 1px solid var(--color-border, #e5e7eb);
   padding: 3rem 1.25rem 2rem;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
 }
 
 .site-footer__container {

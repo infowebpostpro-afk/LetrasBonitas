@@ -573,6 +573,11 @@ export default function LetrasGoticasPage() {
               <p>Convierte tu texto en negrita fuerte para WhatsApp y redes sociales.</p>
               <Link href="/letras-negritas/" className="btn btn--secondary">Ver Negritas</Link>
             </div>
+            <div className="family-card">
+              <h3>Letras Graffiti</h3>
+              <p>Lettering urbano, tags callejeros y fuentes de estilo graffiti para copiar.</p>
+              <Link href="/letras-graffiti/" className="btn btn--secondary">Ver Graffiti</Link>
+            </div>
           </div>
         </section>
       </article>
