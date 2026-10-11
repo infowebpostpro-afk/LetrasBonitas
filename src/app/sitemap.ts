@@ -40,6 +40,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/letras-aesthetic/",
     "/letras-burbuja/",
     "/letras-negritas/",
+    "/letras-pequenas/",
+    "/letras-pequenas/letras-pequenas-arriba/",
+    "/tipos-de-letras/modelos-de-letras/",
+    "/letras-manuscritas/",
     "/letras-graffiti/",
     "/letras-para-tiktok/",
     "/letras-para-whatsapp/",
@@ -84,6 +88,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       route === "/letras-aesthetic/" ||
       route === "/letras-burbuja/" ||
       route === "/letras-negritas/" ||
+      route === "/letras-pequenas/" ||
+      route === "/letras-manuscritas/" ||
       route === "/letras-para-tiktok/" ||
       route === "/letras-para-whatsapp/" ||
       route === "/letras-para-facebook/" ||
@@ -95,6 +101,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     } else if (
       route.startsWith("/conversor-de-letras/") ||
       route.startsWith("/letras-cursivas/") ||
+      route.startsWith("/letras-pequenas/") ||
+      route.startsWith("/tipos-de-letras/") ||
       route.startsWith("/letras-para-instagram/") ||
       route.startsWith("/simbolos/") ||
       route.startsWith("/emojis/") ||
