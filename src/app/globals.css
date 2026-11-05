@@ -3154,6 +3154,162 @@ footer a {
 
 
 /* ════════════════════════════════════════════
+   TOOL TUTORIAL SHOWCASE (Visual Step-by-Step Mockups)
+   ════════════════════════════════════════════ */
+
+.tool-tutorial-showcase {
+  margin: var(--space-4) 0 var(--space-6);
+  padding: var(--space-5);
+  background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xs);
+}
+
+.tool-tutorial-showcase__header {
+  text-align: center;
+  margin-bottom: var(--space-5);
+}
+
+.tool-tutorial-showcase__eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brand);
+  background: var(--color-brand-soft);
+  padding: 0.2rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-2);
+}
+
+.tool-tutorial-showcase__title {
+  font-family: var(--font-brand);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.tool-tutorial-showcase__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .tool-tutorial-showcase {
+    padding: var(--space-6);
+  }
+
+  .tool-tutorial-showcase__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+}
+
+.tool-tutorial-card {
+  margin: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-xs);
+  transition: border-color var(--duration-normal) var(--ease),
+              box-shadow var(--duration-normal) var(--ease),
+              transform var(--duration-normal) var(--ease);
+}
+
+.tool-tutorial-card:hover {
+  border-color: var(--color-border-brand);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.tool-tutorial-card__badge-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: var(--space-4);
+}
+
+.tool-tutorial-card__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-brand);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+}
+
+.tool-tutorial-card__step-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.tool-tutorial-card__image-container {
+  width: 100%;
+  max-width: 260px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: var(--space-4);
+  filter: drop-shadow(0 14px 28px rgba(17, 24, 45, 0.12));
+}
+
+@media (min-width: 1024px) {
+  .tool-tutorial-card__image-container {
+    max-width: 280px;
+    height: 440px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tool-tutorial-card {
+    padding: var(--space-4);
+  }
+
+  .tool-tutorial-card__image-container {
+    max-width: 220px;
+    height: 360px;
+  }
+}
+
+.tool-tutorial-card__image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 26px;
+  user-select: none;
+}
+
+.tool-tutorial-card__caption {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-ink-soft);
+  text-align: center;
+  margin-top: auto;
+  padding: 0 var(--space-2);
+}
+
+.tool-tutorial-card__caption strong {
+  color: var(--color-ink);
+}
+
+/* ════════════════════════════════════════════
    STEPS GRID
    ════════════════════════════════════════════ */
 

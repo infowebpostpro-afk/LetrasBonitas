@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { HomeFontGenerator } from "@/components/font-generator/HomeFontGenerator";
 import { fontStyles } from "@/lib/unicode";
 
@@ -174,8 +175,62 @@ export default function HomePage() {
         {/* Section 3: How to make */}
         <section className="prose-card">
           <h2>¿Cómo hacer letras bonitas?</h2>
-          <p>Crear letras bonitas es muy sencillo.</p>
-          
+          <p>
+            Crear letras bonitas y personalizar cualquier texto es muy rápido y sencillo con nuestro generador online. Solo tienes que escribir o pegar tu palabra, frase o nombre en el recuadro interactivo y el sistema generará automáticamente cientos de estilos tipográficos con caracteres Unicode en tiempo real.
+          </p>
+          <p>
+            No necesitas descargar aplicaciones pesadas ni instalar fuentes externas en tu dispositivo; todo el proceso se realiza directamente desde el navegador de tu móvil o computadora para que puedas explorar variantes, filtrar por categorías y copiar tus diseños favoritos en un solo clic.
+          </p>
+
+          <div className="tool-tutorial-showcase">
+            <div className="tool-tutorial-showcase__header">
+              <span className="tool-tutorial-showcase__eyebrow">Guía Visual</span>
+              <h3 className="tool-tutorial-showcase__title">Cómo funciona el generador en tu móvil</h3>
+            </div>
+
+            <div className="tool-tutorial-showcase__grid">
+              <figure className="tool-tutorial-card">
+                <div className="tool-tutorial-card__badge-wrapper">
+                  <span className="tool-tutorial-card__badge">Paso 1</span>
+                  <span className="tool-tutorial-card__step-title">Escribe y filtra</span>
+                </div>
+                <div className="tool-tutorial-card__image-container">
+                  <Image
+                    src="/images/como-usar/paso-1-escribe-tu-texto.webp"
+                    alt="Escribe tu texto en el generador de letras bonitas y filtra por categorías"
+                    width={351}
+                    height={719}
+                    className="tool-tutorial-card__image"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="tool-tutorial-card__caption">
+                  <strong>1. Escribe tu texto:</strong> Ingresa tus palabras en el cuadro interactivo y selecciona tus categorías favoritas como Populares, Cursivas o Elegantes.
+                </figcaption>
+              </figure>
+
+              <figure className="tool-tutorial-card">
+                <div className="tool-tutorial-card__badge-wrapper">
+                  <span className="tool-tutorial-card__badge">Paso 2</span>
+                  <span className="tool-tutorial-card__step-title">Elige y copia</span>
+                </div>
+                <div className="tool-tutorial-card__image-container">
+                  <Image
+                    src="/images/como-usar/paso-2-copiar-estilo.webp"
+                    alt="Compara estilos de letras bonitas y copia el resultado con un solo clic"
+                    width={502}
+                    height={1024}
+                    className="tool-tutorial-card__image"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="tool-tutorial-card__caption">
+                  <strong>2. Copia con un clic:</strong> Explora cientos de resultados en vivo, pulsa el botón <em>Copiar</em> en tu estilo preferido y pégalo donde quieras.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
           <div className="steps-grid">
             <div className="step-card">
               <span className="step-card__number">1</span>
